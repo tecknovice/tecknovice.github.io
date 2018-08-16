@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+.wrapper{
+    max-width: 1000px;
+    margin: auto;
+}
+.banner{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
+.banner img{
+    width: 100%;
+}
+.gallery img{
+    float: left;
+    width:50%;
+    padding:10px;
+
+}
+.gallery img:hover{
+    border: 2px solid yellowgreen;
+    background-color: aqua;
+}
