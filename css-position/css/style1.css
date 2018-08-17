@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+.wrapper{
+    max-width: 1000px;
+    margin: auto;
+}
+.clear{
+    clear: both;
+}
+.float-menu{
+    position: relative;
+    width: 20%;
+    height: 1px;
+    float: left;
+}
+.menu{
+    position: absolute;
+    width: 100%;
+}
+.menu a{
+    display: block;
+}
+
+.gallery{
+    float: left;
+    width: 80%;
+}
+.column{
+    float:left;
+    width:25%;
+    padding:5px;
+}
+.gallery .column img{
+    width: 100%;
+    margin-bottom:5px;
+}
+a.back-to-top{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+.footer{
+    text-align: center;
+}
