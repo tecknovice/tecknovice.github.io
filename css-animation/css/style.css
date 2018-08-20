@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+@keyframes banner {
+    0%  {background-color: #EF7126; color: #F9E559;}
+    25%  {background-color: #6F3662; color: #FFFFFF;}
+    50%  {background-color: #9F6164; color: #F8DEBD;}
+    75%  {background-color: #44B3C2; color: #FFFFFF;}
+    100% {background-color: #218C8D; color: #F9E559;}
+}
+
+h1.banner {
+	animation: banner 5s ease infinite;
+}
+.wrapper{
+    max-width:1000px;
+    margin: auto;
+}
+h1.banner{
+    text-align: center;
+    color: #F9E559;
+    background-color: #EF7126;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.overflow{
+    overflow: hidden;
+    float:left;
+    width:33.3333%;
+    padding: 10px;
+}
+
+.overflow img{
+    width:100%;
+    padding: 5px;
+    border: 1px solid green;
+    background-color: aqua;
+}
+
+.clear{
+    clear: both;
+}
+.footer{
+    position: relative;
+    padding: 20px;
+}
+
+.footer span{
+    font-size: 1.5em;
+    position: absolute;
+    animation: footer 10s cubic-bezier(0.4, 0, 0.2, 1) 1, fadeinfadeout 10s cubic-bezier(0.4, 0, 0.2, 1) 1  ;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes footer{
+    0% {right:0px;}
+    50% {right: 100px;}
+    100%{right:500px;}
+}
+
+@keyframes fadeinfadeout{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
