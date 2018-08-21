@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    width: 1280px;
+    height:768px;
+    margin: auto;
+    margin-top: 100px;
+    background-image: url("../img/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+@keyframes text {
+    0%  { color: red}
+    50%  { color: green;}
+    100%  { color: red;}
+}
+span{
+    animation: text 0.5s linear infinite;
+    position: absolute;
+    left: 20px;
+    top: 300px;
+    font-size: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.wrap{
+    bottom: 0px;
+    right: 0px;
+    width: 50%;
+    height: 80%;
+    left:50%;
+    transform-style: preserve-3d;
+    position: absolute;
+    z-index: 2;
+}
+.sky{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    width:50%;
+    height: 200px;
+    z-index: 1;
+}
+@keyframes star1 {
+    0% {opacity: 1; transform: scale(1);}
+    50% {opacity: 0; transform: scale(0);}
+    100% {opacity: 1; transform: scale(1);}
+}
+.sky img:nth-child(1) {
+    position: absolute;
+    top: 80px;
+    left:70px;
+    animation: star1 3s linear infinite;
+}
+@keyframes star2 {
+    0% {opacity: 0; transform: scale(0);}
+    50% {opacity: 1; transform: scale(1);}
+    100% {opacity: 0; transform: scale(0);}
+}
+
+.sky img:nth-child(2) {
+    position: absolute;
+    bottom: 10px;
+    left:50px;
+    animation: star2 3s linear infinite;
+}
+
+@keyframes star3 {
+    0% {opacity: 0.75; transform: scale(0.75);}
+    50% {opacity: 0.25; transform: scale(0.25);}
+    100% {opacity: 0.75; transform: scale(0.75);}
+}
+
+.sky img:nth-child(3) {
+    position: absolute;
+    bottom: 60px;
+    right:100px;
+    animation: star3 3s linear infinite;
+}
+
+@keyframes star4 {
+    0% {opacity: 0.25; transform: scale(0.25);}
+    50% {opacity: 0.75; transform: scale(0.75);}
+    100% {opacity: 0.25; transform: scale(0.25);}
+}
+
+.sky img:nth-child(4) {
+    position: absolute;
+    top: 90px;
+    right:150px;
+    animation: star4 3s linear infinite;
+}
+
+.sky img:nth-child(5) {
+    position: absolute;
+    top: 50%;
+    right:50%;
+    animation: star1 2s linear infinite;
+    animation-delay: 0.5s;
+}
