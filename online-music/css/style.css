@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #f2f2f2;
+    color: #333;
+}
+.song{
+    width: 1000px;
+    margin: auto;
+    padding-left:20px;
+    padding-right:20px;
+    background-color: #fff;
+}
+.header, .footer{
+    min-width: 1000px;
+    height: 100px;
+    padding: 30px;
+    text-align: center;
+    background-color: #1c1c1c;
+    color: white;
+}
+.title{
+    width: 100%;
+    padding: 5px;
+    font-size: 2em;
+}
+.content{
+    width: 100%;
+    padding: 5px;
+    font-style: italic;
+}
+.summary{
+    margin-bottom: 20px;
+}
+.music{
+    margin-bottom:20px;
+}
+audio,video{
+    width: 100%;
+}
+.lyrics{
+    background-color: powderblue;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    height: 200px;
+    overflow: hidden;
+}
+.lyrics:active{
+    height: 0%;
+    overflow: visible;
+}
+.singer{
+    overflow: auto;
+    margin-bottom: 20px;
+    margin-left:-5px;
+    margin-right: -5px;
+}
+.singer img{
+    width: 15%;
+    float: left;
+    padding: 5px;
+}
+.singer-info{
+    width: 85%;
+    float: left;
+    padding: 5px;
+    cursor: pointer;
+    height: 150px;
+    overflow: hidden;
+}
+.singer-info:active{
+    height: 0%;
+    overflow: visible;
+}
+.video-list, .album-list{
+    margin-bottom: 20px;
+}
+.image-title{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.image-content{
+    margin:-10px;
+}
+.video, .album{
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+.video img, .album img{
+    z-index: 1;
+    width: 100%;
+}
+
+.video div, .album div{
+    text-align: center;
+}
+.clear{
+    clear: both;
+}
+.triangle-right {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-top: 25px solid transparent;
+    border-left: 50px solid white;
+    border-bottom: 25px solid transparent;
+}
+.play{
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid white;
+    border-radius: 50%;
+    width:100px;
+    height: 100px;
+}
+.video-image, .album-image{
+    cursor: pointer;
+    position: relative;
+}
+.video-image:hover .play, .album-image:hover .play{
+    visibility: visible;
+}
+.video-image:hover img, .album-image:hover img{
+    opacity: 0.5;
+}
+.play-img{
+    position: relative;
+}
