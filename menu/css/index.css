@@ -1,0 +1,9 @@
+.component{
+    width: 50%;
+    height: 371px;
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
