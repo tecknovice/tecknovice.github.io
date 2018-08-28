@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font: 15px 'Source Sans Pro', sans-serif;
+    line-height: 2em;
+    color: #333333;
+    letter-spacing: 1px;
+    background-image: url(https://www.designerblogs.com/wp-content/uploads/2018/03/bailee-bg-top.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.clear{
+    clear: both;
+}
+#page{
+    width:1000px;
+    height: 300px;
+    margin: auto;
+}
+.logo{
+    height: 300px;
+    padding-top: 100px;
+}
+.logo-title{
+    font: 65px 'Dawning of a New Day', cursive;
+    font-weight: normal;
+    color: #888888;
+    margin-bottom: 0px;
+    line-height: 70px;
+}
+.logo-content{text-transform: uppercase;letter-spacing: 1.5px;font: 12px 'Playfair Display', serif;color: #999999;}
+nav{
+    width: 100%;
+    margin-bottom: 50px;
+}
+#content{
+    width:65%;
+    float: left;
+    padding: 0 50px 0 50px;
+    border-right: 1px dotted #eee;
+}
+aside{
+    width: 35%;
+    float:left;
+    padding: 0 50px 0 50px;
+    /* border-left: 1px dotted #eee; */
+}
+article{
+    width: 100%;
+    margin-bottom:  40px;
+}
+nav ul{
+    list-style-type: none;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    height: 30px;
+}
+nav li{
+    height: 30px;
+    width: 20%;
+    float: left;
+    padding: 5px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    color: #888888;
+    letter-spacing: 5px;
+    margin: 0px 15px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-decoration: none;
+}
+.date{
+    font: 10px 'Source Sans Pro', sans-serif;
+    color: #888888;
+    font-weight: normal;
+    text-align: center;
+}
+.title{
+    font: 20px 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555555;
+}
+.content img{
+    width: 100%;
+}
+.left-title{
+    font: 24px 'Dawning of a New Day', cursive;
+    color: #555555;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.portrait img{
+    width: 60%;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    margin-bottom:  20px;
+}
+.about{
+    text-align: center;
+    margin-bottom:  30px;
+}
+.search{
+    width: 100%;
+    margin: auto;
+}
+.search input{
+    border: 0px;
+    height: 19px !important;
+    font-size: 13px !important;
+}
+.search > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid  #eee;
+    border-bottom: 1px solid  #eee;
+    margin-bottom:  30px;
+    padding:  10px 0 10px 0;
+}
+.popular{
+    
+}
+.thumbnail{
+    height: 200px;
+    overflow: hidden;
+    margin-bottom:  20px;
+}
+.thumbnail img{
+    width: 30%;
+    float: left;
+    padding: 5px;
+}
+.small{
+    line-height: 1.1em;
+    text-align: left;
+}
+footer{font-size: 10px;text-align:  center;}
