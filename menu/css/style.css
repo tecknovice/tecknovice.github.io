@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Andika');
+@import url('../../fontawesome-free-5.2.0-web/css/all.min.css');
+/* @import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css'); */
 *{
     padding: 0;
     margin: 0;
