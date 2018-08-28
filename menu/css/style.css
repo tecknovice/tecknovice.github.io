@@ -1,19 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css?family=Andika');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 body{
     background-image: url("../img/html_pic.png");
+    font-family: 'Andika', sans-serif;
 }
 .wrapper{
     width: 1200px;
     margin: auto;
-    /* position: relative; */
 }
 .menu a{
     text-decoration: none;
     color: white;
+    text-align: center;
 }
 .menu a:hover{
     text-decoration-line: underline;
@@ -70,18 +74,16 @@ body{
     /* top:100px; */
 }
 .title{
-    font-size: 51px;
-    font-weight: bold;
+    font-size: 40px;
     color: #b58d43;
-    font-family: ultramarina;
+    font-family: 'Andika', sans-serif;
     text-align: center;
-    padding: 10px;
 }
 .content{
-    font-family: lato-regular;
+    font-family: 'Andika', sans-serif;
     color: #414042;
     padding: 10px;
-    line-height: 25px;
+    line-height: 23px;
     text-align: center;
 }
 .tel{
