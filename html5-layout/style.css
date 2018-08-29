@@ -11,7 +11,7 @@ body{
     line-height: 2em;
     color: #333333;
     letter-spacing: 1px;
-    background-image: url(https://www.designerblogs.com/wp-content/uploads/2018/03/bailee-bg-top.png);
+    background-image: url('img/bg_top.png');
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -42,14 +42,13 @@ nav{
 #content{
     width:65%;
     float: left;
-    padding: 0 50px 0 50px;
+    padding: 0 50px 0 0;
     border-right: 1px dotted #eee;
 }
 aside{
     width: 35%;
     float:left;
-    padding: 0 50px 0 50px;
-    /* border-left: 1px dotted #eee; */
+    padding: 0 0 0 50px;
 }
 article{
     width: 100%;
