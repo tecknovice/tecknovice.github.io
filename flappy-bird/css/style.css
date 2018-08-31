@@ -1,12 +1,29 @@
 *{
     box-sizing: border-box;
+    font: 30px Arial;
+    text-align: center;
 }
 .wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 canvas{
     border: 1px solid green;
-    margin: auto;
   }
+.wrapper >div {
+    position: absolute;
+}
+button{
+    display: none;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    width: 100%;
+}
+#result{
+    display: none;
+    width: 100%;
+}
