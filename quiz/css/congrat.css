@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    color: white;
+}
+#wrapper{
+    width: 800px;
+    height: 700px;
+    background-image: radial-gradient(circle, #a120df, #290358);
+}
