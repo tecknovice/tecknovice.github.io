@@ -1,17 +1,19 @@
 let repo;
 let qa;
 let point;
+// let reward;
 
-const wrapper = document.getElementById('wrapper');
+// const wrapper = document.getElementById('wrapper');
 
-const qna = document.getElementById('qna');
-const question = document.getElementById('question');
-const answerFrame = document.getElementById('answer-frame');
+// const qna = document.getElementById('qna');
+// const question = document.getElementById('question');
+// const answerFrame = document.getElementById('answer-frame');
 const answerList = document.querySelectorAll('.answer > div');
+// const rewardList = document.querySelectorAll('#reward > div');
 
-
-const slider = document.getElementById('slider');
-const logo = document.getElementById('logo');
+// const slider = document.getElementById('slider');
+// const cash = document.getElementById('cash');
+// const logo = document.getElementById('logo');
 const playButton = document.getElementById('play');
 
 function QA(question,answer1,answer2,answer3,answer4,rightAnswer){
@@ -80,20 +82,23 @@ function reset(){
     qa21,qa22,qa23,qa24,qa25,qa26,qa27,qa28,qa29,qa30,qa31,qa32,qa33,qa34,qa35,qa36];
     wrapper.style.backgroundImage = 'url("img/stage.png")';    
    qna.style.display='block';
+   reward.style.display='block';
    slider.style.visibility='hidden';
    slider.style.top= '-100%';
    point = 0;
    qa = null;
+   cash.innerHTML ='';
 }
 function start(){
     wrapper.style.backgroundImage = 'url("img/start.png")';  
     qna.style.display='none';
+    reward.style.display='none';
     slider.style.visibility='visible';
     slider.style.top= '470px';
     // playButton.innerText = 'Play';
 }
 function fail(){
-    var event = new Event('build');
+    var event = new Event('fail');
     document.dispatchEvent(event);
     // playButton.innerText = 'Play again';
 }
@@ -113,6 +118,14 @@ function answerQuestion(e){
     answer = this.innerText;
     if(qa.rightAnswer.toLowerCase()===answer.toLowerCase()&&point<15){
         point +=1;
+        document.getElementById(point).style.backgroundColor = '#3c9090';
+        document.getElementById(point).style.color = '#e2c44c';
+        document.getElementById(point).style.borderRadius = '10px';
+        if(point-1>0){
+            document.getElementById(point-1).style.backgroundColor = 'transparent';
+            document.getElementById(point-1).style.color = '#378695';
+            document.getElementById(point-1).style.borderRadius = '0px';
+        }
         showQuestion();
     }
     else if(point==15){
@@ -133,9 +146,16 @@ function unhover(element) {
     element.setAttribute('src', 'img/arrow.png');
 }
 // Listen for the event.
-document.addEventListener('build', function (e) {  
+document.addEventListener('fail', function (e) {  
     wrapper.style.backgroundImage = 'url("img/start.png")';  
     qna.style.display='none';
+    reward.style.display='none';
+    if(point>0){
+        document.getElementById(point).style.backgroundColor = 'transparent';
+        document.getElementById(point).style.color = '#378695';
+        document.getElementById(point).style.borderRadius = '0px';
+        cash.innerHTML='Xin chúc mừng! bạn đã có ' + document.getElementById(point).children[1].innerText;
+    }
     slider.style.visibility='visible';
     slider.style.top= '470px';
 }, false);
