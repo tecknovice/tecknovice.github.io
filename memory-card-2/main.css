@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+}
 .wrapper{
     width: 1000px;
     margin: auto;
