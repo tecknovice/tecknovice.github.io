@@ -1,7 +1,11 @@
 // const cards = $('.card');
 const wrapper = $('.wrapper');
+const progress = $('#progress');
+const cardsWrapper = $('.cards-wrapper');
 let str='';
 let card1 = null, card2;
+let point =0;
+let remainTime = 0;
 let images = ['img/alice.jpg','img/butterfly.png','img/chaugnar.jpg','img/cresht.jpg','img/dieuthuyen.jpg'];
 images = images.concat(images);
 images = shuffle(images);
@@ -15,7 +19,8 @@ for(index=0;index<images.length;index++){
     str +="</div>";
     str+="</div>";
 }
-wrapper.html(str);
+str+="<div class='clear'></div>";
+cardsWrapper.html(str);
 const cards = $('.card');
 for(index=0;index<cards.length;index++){
     card = $(cards[index]);
@@ -50,6 +55,20 @@ function handleEventClickCard(e){
         }
     }
 }
+reset();
+function reset(){
+    remainTime = 10;
+    progress.attr('max',remainTime);
+    progress.attr('value',remainTime);
+}
+let run = setInterval(function(){
+    remainTime =remainTime-1;
+    progress.attr('value',remainTime);
+    if(remainTime==0){
+        clearInterval(run);
+        alert('time up');
+    }
+},1000);
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
   
