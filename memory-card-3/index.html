@@ -10,6 +10,20 @@
 </head>
 <body>
     <div class="wrapper">
+        <div class='modal'>
+            <div class='modal-play'>
+                <div class='title'>Memory card</div>
+                <button onclick='play();'>Play</button>
+            </div>
+            <div class='modal-loss'>
+                <div class='title'>You loss</div>
+                <button  onclick='play();'>Play again</button>
+            </div>
+            <div class='modal-win'>
+                <div class='title'>Congrat! You win</div>
+                <button  onclick='play();'>Play again</button>
+            </div>
+        </div>
         <div class='progress-bar'>
             <progress id ='progress' max="100" value="80"></progress>
         </div>
