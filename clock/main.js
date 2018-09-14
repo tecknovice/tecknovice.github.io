@@ -42,13 +42,9 @@ let newyorkClock = new Clock(utcHour-5,utcMin,utcSecond, newyork_hour,newyork_mi
 let londonClock = new Clock(utcHour,utcMin,utcSecond,london_hour,london_min,london_second);
 let tokyoClock = new Clock(utcHour+9,utcMin,utcSecond,tokyo_hour,tokyo_min,tokyo_second);
 
-localClock.run();
-newyorkClock.run();
-londonClock.run();
-tokyoClock.run();
 window.onload = function(){
-    update(localClock);
-    update(newyorkClock);
-    update(londonClock);
-    update(tokyoClock);
+    localClock.run();
+    newyorkClock.run();
+    londonClock.run();
+    tokyoClock.run();
 };

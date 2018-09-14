@@ -31,7 +31,7 @@ body{
 .outer1{
     width: 100%;
     height: 100%;
-    background-color: yellow;
+    background-color: #eeeeee;
 }
 .outer2{
     background-color: transparent;
@@ -39,10 +39,10 @@ body{
 .inner1{
     width: 80%;
     height: 80%;
-    background-color: yellow;
+    background-color: #eeeeee;
 }
 .inner2{
-    background-color: green;
+    background-color: #dddddd;
 }
 .outer2, .inner2{
     width: 95%;
@@ -55,7 +55,7 @@ body{
     position: absolute;
     transform: translate(-50%,-50%);
     font-style:  italic;
-    color: red;
+    color: #cd3278;
 }
 .number-three{
     top:50%;
@@ -81,7 +81,7 @@ body{
     height: 100%;
     position: absolute;
     left: 49.5%;
-    background-color: red;
+    background-color: #cd3278;
     transform-origin: 50% 50%;
 }
 .thirty{
@@ -101,9 +101,10 @@ body{
     top:20%;
     left: 50%;
     transform: translate(-50%,-50%);
+    font-family: cursive;
 }
 .center{
-    background-color: red;
+    background-color: #cd3278;
     width: 5%;
     height: 5%;
 }
@@ -115,7 +116,7 @@ body{
     top: 20%;
     transform: rotate(0deg);
     transform-origin: 50% 100%;
-    background-color: red;
+    background-color: #cd3278;
     z-index: 1000;
 }
 .minute{
@@ -126,7 +127,7 @@ body{
     top: 10%;
     transform: rotate(0deg);
     transform-origin: 50% 100%;
-    background-color: red;
+    background-color: #cd3278;
     z-index: 1000;
 }
 .second{
@@ -137,7 +138,7 @@ body{
     top: 5%;
     transform: rotate(0deg);
     transform-origin: 50% 69%;
-    background-color: red;
+    background-color: #cd3278;
     z-index:  1000;
 }
 #clock2, #clock3, #clock4{
