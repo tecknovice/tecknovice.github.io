@@ -53,9 +53,6 @@ let app = new Vue({
     },
     methods: {
         sort: function (attr) {
-            if(attr=='image'){
-                return;
-            }
             if(this.sortName == attr){
                 this.ascending = !this.ascending;
             }else{
@@ -63,26 +60,63 @@ let app = new Vue({
                 this.sortName = attr;
             }
             ascending = this.ascending;
-            this.products.sort(function(i,j){
-                let value_i, value_j;
-                if(attr=='price'){
-                    value_i = Number(i[attr].slice(1));
-                    value_j = Number(j[attr].slice(1));
-                }else if(attr=='quantity'){
-                    value_i = Number(i[attr]);
-                    value_j = Number(j[attr]);
-                }
-                else{
-                    value_i = i[attr];
-                    value_j = j[attr];
-                }
-                if(ascending){
-                    return (value_i < value_j);
-                }else{
-                    return (value_i > value_j);
-                }
-            });
+            // Work well
+            sortProducts(this.products,attr,ascending);
+            //Not work
+            // sortArray(this.products, attr, ascending);
             console.log(this.products);
         }
     }
 });
+
+function sortProducts(products, attr, ascending){
+    products.sort(function(i,j){
+        value_i = i[attr];
+        value_j = j[attr];
+        if(ascending){
+            return (value_i < value_j);
+        }else{
+            return (value_i > value_j);
+        }
+    });
+}
+
+function sortArray(products, sortName, isIncrease) {
+    for (i = 0; i < products.length; i++) {
+        product_i = products[i];
+        value_i = getValue(product_i, sortName);
+        current_index = i;
+        current_value = value_i;
+        for (j = i + 1; j < products.length; j++) {
+            product_j = products[j];
+            value_j = getValue(product_j, sortName);
+            if (isIncrease) {
+                if (current_value > value_j) {
+                    current_index = j;
+                    current_value = value_j;
+                }
+            } else {
+                if (current_value < value_j) {
+                    current_index = j;
+                    current_value = value_j;
+                }
+            }
+        }
+        swap(products, i, current_index);
+    }
+}
+function getValue(product_i, sortName) {
+    let value_i;
+    for (key in product_i) {
+        if (key == sortName) {
+            value_i = product_i[key];
+            return value_i;
+        }
+    }
+    return '';
+}
+function swap(products, i, current_index) {
+    temp = products[i];
+    products[i] = products[current_index];
+    products[current_index] = temp;
+}

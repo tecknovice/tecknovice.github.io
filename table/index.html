@@ -18,17 +18,24 @@
         <table>
             <thead>
                 <tr>
-                    <th v-on:click='sort'>Image<i class="fas fa-sort"></i></th>
-                    <th v-on:click='sort'>Name<i class="fas fa-sort"></i></th>
-                    <th v-on:click='sort'>Code<i class="fas fa-sort"></i></th>
-                    <th v-on:click='sort'>Price<i class="fas fa-sort"></i></th>
-                    <th v-on:click='sort'>Quantity<i class="fas fa-sort"></i></th>
+                    <th v-for='attr in attributes' v-on:click='sort(attr)'>
+                        {{attr}}
+                        <div class="right" v-if='sortName==attr&&ascending==true'>
+                            <i class="fas fa-sort-down"></i>
+                        </div>
+                        <div class="right" v-else-if='sortName==attr&&ascending==false'>
+                            <i class="fas fa-sort-up"></i>
+                        </div>
+                        <div class='right' v-else>
+                            <i class="fas fa-sort"></i>
+                        </div>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for='product in products'>
-                    <td v-for='(value, key) in product'>
-                        {{value}}
+                    <td v-for='attr in attributes'>
+                        {{product[attr]}}
                     </td>
                 </tr>
             </tbody>
