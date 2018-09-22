@@ -9,22 +9,25 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="faker.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
     <div id='app'>
-        <h2 class='table-name'>{{tableName}}</h2>
+        <h1 class='table-name'>{{tableName}}</h1>
         <table>
             <thead>
                 <tr>
-                    <th v-for='attr in attributes' v-on:click='sort(attr)'>
-                        {{attr}}
-                        <div class="right" v-if='sortName==attr&&ascending==true'>
+                    <th v-for='column in columns' v-on:click='sort(column)'>
+                        {{column}}
+                        <div class="right" v-if='sortName==column&&ascending==true'>
                             <i class="fas fa-sort-down"></i>
                         </div>
-                        <div class="right" v-else-if='sortName==attr&&ascending==false'>
+                        <div class="right" v-else-if='sortName==column&&ascending==false'>
                             <i class="fas fa-sort-up"></i>
+                        </div>
+                        <div class="right" v-else-if='column=="avatar"'>
                         </div>
                         <div class='right' v-else>
                             <i class="fas fa-sort"></i>
@@ -33,9 +36,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for='product in products'>
-                    <td v-for='attr in attributes'>
-                        {{product[attr]}}
+                <tr v-for='row in rows'>
+                    <td v-for='column in columns'>
+                        <div v-if='column=="avatar"'>
+                            <img v-bind:src="row[column]">
+                        </div>
+                        <div v-else>
+                            {{row[column]}}
+                        </div>
                     </td>
                 </tr>
             </tbody>

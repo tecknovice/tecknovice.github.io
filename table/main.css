@@ -5,17 +5,19 @@
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 #app{
-    width:1000px;
+    min-width:1000px;
     margin: auto;
 }
 .table-name{
     text-align: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
 }
 table{
     border-collapse: collapse;
     width: 100%;
 }
-table,th,td{
+th,td{
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -31,6 +33,7 @@ th {
     text-align: left;
     background-color: #4CAF50;
     color: white;
+    text-transform: capitalize;
 }
 .right{
     float: right;
