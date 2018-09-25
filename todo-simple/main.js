@@ -1,40 +1,40 @@
-let app  = new Vue({
-    el: '#app',
-    data() {
-        return {
-            name: "Adam",
-            tasks: [],
-            hideCompleted: true,
-            newItemText: ""
+Vue.component('todo-item', {
+    template: '\
+      <li>\
+        {{ title }}\
+        <button v-on:click="$emit(\'remove\')">Remove</button>\
+      </li>\
+    ',
+    props: ['title']
+  })
+  
+  new Vue({
+    el: '#todo-list-example',
+    data: {
+      newTodoText: '',
+      todos: [
+        {
+          id: 1,
+          title: 'Do the dishes',
+        },
+        {
+          id: 2,
+          title: 'Take out the trash',
+        },
+        {
+          id: 3,
+          title: 'Mow the lawn'
         }
-    },
-    computed: {
-        filteredTasks() {
-            return this.hideCompleted ?
-                this.tasks.filter(t => !t.done) : this.tasks
-        }
+      ],
+      nextTodoId: 4
     },
     methods: {
-        addNewTodo() {
-            this.tasks.push({
-                action: this.newItemText,
-                done: false
-            });
-            this.storeData();
-            this.newItemText = "";
-        },
-        storeData() {
-            localStorage.setItem("todos", JSON.stringify(this.tasks));
-        },
-        deleteCompleted() {
-            this.tasks = this.tasks.filter(t => !t.done);
-            this.storeData();
-        }
-    },
-    created() {
-        let data = localStorage.getItem("todos");
-        if (data != null) {
-            this.tasks = JSON.parse(data);
-        }
+      addNewTodo: function () {
+        this.todos.push({
+          id: this.nextTodoId++,
+          title: this.newTodoText
+        })
+        this.newTodoText = ''
+      }
     }
-});
+  })
