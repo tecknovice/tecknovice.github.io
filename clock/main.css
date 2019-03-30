@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.wrapper{
+    position: relative;
+    width: 700px;
+    height: 700px;
+}
+#clock1{
+    width: 100%;
+    height: 100%;
+}
+.circle{
+    border-radius: 50%;
+}
+.outer1, .outer2,.inner1, .inner2, .center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+.outer1{
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeee;
+}
+.outer2{
+    background-color: transparent;
+}
+.inner1{
+    width: 80%;
+    height: 80%;
+    background-color: #eeeeee;
+}
+.inner2{
+    background-color: #dddddd;
+}
+.outer2, .inner2{
+    width: 95%;
+    height: 95%;
+}
+.big{
+    font-size:  2em;
+}
+.number{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-style:  italic;
+    color: #cd3278;
+}
+.number-three{
+    top:50%;
+    left: 95%;
+}
+.number-six{
+    top: 95%;
+    left: 50%;
+}
+.number-nine{
+    top: 50%;
+    left: 5%;
+}
+.number-twelve{
+    top: 5%;
+    left:50%;
+}
+.hand{
+
+}
+.thirty, .sixty, .minus-thirty, .minus-sixty{
+    width: 1%;
+    height: 100%;
+    position: absolute;
+    left: 49.5%;
+    background-color: #cd3278;
+    transform-origin: 50% 50%;
+}
+.thirty{
+    transform: rotate(30deg);
+}
+.sixty{
+    transform: rotate(60deg);
+}
+.minus-thirty{
+    transform: rotate(-30deg);
+}
+.minus-sixty{
+    transform: rotate(-60deg);
+}
+.time{
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: cursive;
+}
+.center{
+    background-color: #cd3278;
+    width: 5%;
+    height: 5%;
+}
+.hour{
+    width: 1%;
+    height: 30%;
+    position: absolute;
+    left: 49.5%;
+    top: 20%;
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    background-color: #cd3278;
+    z-index: 1000;
+}
+.minute{
+    width: 0.75%;
+    height: 40%;
+    position: absolute;
+    left: 49.625%;
+    top: 10%;
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+    background-color: #cd3278;
+    z-index: 1000;
+}
+.second{
+    width: 0.5%;
+    height: 65%;
+    position: absolute;
+    left: 49.75%;
+    top: 5%;
+    transform: rotate(0deg);
+    transform-origin: 50% 69%;
+    background-color: #cd3278;
+    z-index:  1000;
+}
+#clock2, #clock3, #clock4{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%,-50%);
+}
+#clock2{
+    top: 50%;
+    left: 25%;
+}
+#clock3{
+    top: 75%;
+    left: 50%;
+}
+#clock4{
+    top: 50%;
+    left: 75%;
+}

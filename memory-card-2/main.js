@@ -37,7 +37,7 @@ function handleEventClickCard(e){
                 card2.css('pointer-events', 'auto');
                 card1 = null;
                 card2 = null;
-            },500);
+            },1000);
         }else{
             setTimeout(function(){
                 card1.css('opacity','0');
@@ -46,7 +46,7 @@ function handleEventClickCard(e){
                 // card2.css('visibility','hidden');
                 card1 = null;
                 card2 = null;
-            },500);
+            },1000);
         }
     }
 }

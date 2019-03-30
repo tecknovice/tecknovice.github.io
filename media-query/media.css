@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.wrap{
+    max-width: 1000px;
+    margin: auto;
+}
+.container{
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.thumbnail{
+    width: 25%;
+    padding: 5px;
+    float: left;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.clear{
+    clear: both;
+}
+@media only screen and (max-width: 800px){
+    .thumbnail{
+        width: 33.3333%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .thumbnail{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 300px){
+    .thumbnail{
+        width: 100%;
+    }
+}

@@ -1,0 +1,16 @@
+/* .row > div{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.title{
+    text-align: center;
+    text-transform: capitalize;
+} */
+.thumbnail{
+    overflow: hidden;
+}
+.thumbnail:hover img{
+    transform: scale(1.2);
+    opacity: 0.5;
+    transition: transform 0.5s linear;
+}
