@@ -1,0 +1,63 @@
+@font-face {
+    font-family: inconsolata;
+    src: url('font/Inconsolata-Regular.ttf');
+}
+@font-face {
+    font-family: playfair_display;
+    src: url('font/PlayfairDisplay-Regular.otf');
+}
+body{
+	font-family: 'playfair_display';
+	font-size: 14px;	
+	color: #626262;
+}
+.navbar {
+	text-transform: uppercase;
+     min-height: auto;
+     margin-top: 70px; 
+     margin-bottom: 0; 
+     border: none; 
+}
+.navbar-default{
+	background-color: #fff;
+    border-color: #fff;
+}
+.navbar-brand{
+	font-family: 'inconsolata';
+	font-size: 30px;
+	color: #000 !important;
+	height: auto;
+	padding: 0 15px;
+}
+.nav>li>a {
+    padding: 0 50px;
+}
+
+.nav>li:last-child>a{
+	padding-right: 0;
+}
+
+.banner-image{
+	margin-top: 76px;
+}
+
+.container {
+     padding-right: 0; 
+     padding-left: 0; 
+}
+
+.container-fluid {
+     padding-right: 0; 
+     padding-left: 0; 
+}
+
+.sign-up{
+	font-family: 'playfair_display';
+	font-size: 30px;
+	color: #333333;
+}
+@media (min-width: 1200px){
+	.container {
+    	width: 1062px;
+	}
+}
