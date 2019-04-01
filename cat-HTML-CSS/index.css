@@ -1,0 +1,93 @@
+
+.thumbnail{
+	margin-bottom: 33px;
+    padding: 0;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    transition: none;
+}
+.tag{
+	font-family: 'ubuntu';
+	color: #b4ad9e;
+	text-transform: uppercase;
+}
+.title{
+	font-size: 30px;
+	margin-top: 30px;
+}
+.description-content{
+	margin-top: 36px;
+}
+.content{
+	margin-top: 36px;
+	height: 63px;
+	line-height: 21px;
+	overflow: hidden;
+}
+.comment{
+	font-family: 'ubuntu';
+	color: #b4ad9e;
+	text-transform: uppercase;
+	margin-top: 53px;
+	cursor: pointer;
+}
+.description{
+	margin-top: 100px;
+}
+.item{
+	margin-top: 135px;
+}
+.sign-up-wrapper{
+	margin-top: 125px;
+	background-color: #f0f0f0;
+	height: 290px;
+}
+.sign-up-title{
+	font-family: 'playfair_display';
+	font-size: 30px;
+	color: #333333;
+	text-align: center;
+	margin-top: 75px;
+}
+.sign-up{
+	width: 400px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #333333;
+    padding-left: 5px;
+}
+.email-textbox{
+	width: calc(100% - 35px);
+    height: 100%;
+    background-color: inherit;
+    border: none;
+}
+.email-textbox:focus, .load-more-button:focus{
+	outline: none;
+	outline-offset: 0;
+}
+.email-textbox:-internal-autofill-previewed, .email-textbox:-internal-autofill-selected {
+    background-color: inherit !important;
+    background-image: none !important;
+    color: inherit !important;
+}
+.send-button{
+	width: 35px;
+	height: 20px;
+	cursor: pointer;
+}
+.load-more-wrapper{
+	height: 1600px;
+}
+.load-more-button{
+	display: block;
+	width: 164px;
+	height: 60px;
+	margin: auto;
+	margin-top: 165px;
+	border: 1px solid;
+	font-size: 20px;
+}
