@@ -10,10 +10,32 @@
     font-family: playfair_display;
     src: url('font/PlayfairDisplay-Regular.otf');
 }
+@font-face {
+    font-family: playfair_display_black;
+    src: url('font/PlayfairDisplay-Black.otf');
+}
+@font-face {
+    font-family: playfair_display_italic;
+    src: url('font/PlayfairDisplay-Italic.otf');
+}
+@font-face {
+    font-family: playfair_display_bold;
+    src: url('font/PlayfairDisplay-Bold.otf');
+}
 body{
 	font-family: 'playfair_display';
 	font-size: 14px;	
 	color: #626262;
+}
+* {
+	box-sizing: border-box;
+  }
+a{
+	color: #626262;
+}
+a:hover{
+	color: #626262;
+	text-decoration: none;
 }
 .navbar {
 	text-transform: uppercase;
@@ -55,12 +77,10 @@ body{
      padding-left: 0; 
 }
 .row{
-	margin-right: 50px; 
-    margin-left: 50px; 
+	margin: 0 -30px;
 }
 .col-md-6{
-	padding-right: 30px;
-    padding-left: 30px;
+	padding: 0 30px;
 }
 .footer{
 	background-color: #f0f0f0;
@@ -84,8 +104,41 @@ body{
 .float-right{
 	float: right;
 }
+.clear{
+	clear: both;
+}
 @media (min-width: 1200px){
 	.container {
     	width: 1062px;
 	}
+}
+
+.description{
+    max-width: 900px;
+    margin: auto;
+	margin-top: 100px;
+	margin-bottom: 60px;
+}
+.thumbnail{
+	margin-bottom: 33px;
+    padding: 0;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    transition: none;
+}
+.tag{
+	font-family: 'ubuntu';
+	color: #b4ad9e;
+	text-transform: uppercase;
+}
+.title{
+	font-size: 30px;
+	margin-top: 30px;
+}
+.description-content{
+	margin-top: 36px;
+}
+.text-bold{
+font-family: 'playfair_display_black';
 }
