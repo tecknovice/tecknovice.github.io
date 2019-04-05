@@ -1,3 +1,10 @@
+.description{
+    max-width: 900px;
+    margin: auto;
+	margin-top: 100px;
+	margin-bottom: 60px;
+}
+
 .comment{
 	font-family: 'ubuntu';
 	color: #b4ad9e;

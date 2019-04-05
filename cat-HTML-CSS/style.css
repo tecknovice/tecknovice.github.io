@@ -112,13 +112,6 @@ a:hover{
     	width: 1062px;
 	}
 }
-
-.description{
-    max-width: 900px;
-    margin: auto;
-	margin-top: 100px;
-	margin-bottom: 60px;
-}
 .thumbnail{
 	margin-bottom: 33px;
     padding: 0;
@@ -135,6 +128,7 @@ a:hover{
 .title{
 	font-size: 30px;
 	margin-top: 30px;
+	text-transform: capitalize;
 }
 .description-content{
 	margin-top: 36px;
