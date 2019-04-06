@@ -16,6 +16,9 @@
 	max-width: 900px;
 	margin: auto;
 	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap:  130px 60px;
 }
 .content{
 	margin-top: 36px;
