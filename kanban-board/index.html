@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KANBAN BOARD</title>
+    <link rel="stylesheet" href="plugins/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+                        <div class="navbar-brand mb-0 h1">KANBAN BOARD</div>
+                </nav>
+        </header>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card">
+                            <h5 class="card-header text-center">TODO</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div>todo 1</div>
+                                    <i class="fas fa-trash-alt "></i>
+                                </li>
+                                <li class="list-group-item">
+                                        <div>todo 2</div>
+                                        <i class="fas fa-trash-alt "></i>
+                                </li>
+                                <li class="list-group-item active">
+                                        <div>todo 3</div>
+                                        <i class="fas fa-trash-alt "></i>
+                                </li>
+                                <li class="list-group-item">
+                                        <div>todo 4</div>
+                                        <i class="fas fa-trash-alt "></i>
+                                </li>
+                            </ul>
+                            <div class="card-body">
+                                    <input type="text" class="form-control" id="newTodo"  placeholder="Enter todo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card">
+                            <h5 class="card-header text-center">DOING</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                        <div>doing 1</div>
+                                        <i class="fas fa-trash-alt "></i>
+                                </li>
+                            </ul>
+                            <div class="card-body">
+                                <input type="text" class="form-control" id="doingTodo"  placeholder="Enter todo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card">
+                            <h5 class="card-header text-center">DONE</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                        <div>done 1</div>
+                                        <i class="fas fa-trash-alt "></i>
+                                </li>                                    
+                                <li class="list-group-item">
+                                        <div>done 2</div>
+                                        <i class="fas fa-trash-alt "></i>
+                                </li>
+                                <li class="list-group-item">
+                                        <div>done 3</div>
+                                        <i class="fas fa-trash-alt "></i>
+                                </li>
+                                <li class="list-group-item">
+                                        <div>done 4 </div>
+                                        <i class="fas fa-trash-alt "></i>
+                                </li>
+                            </ul>
+                            <div class="card-body">
+                                    <input type="text" id="doneTodo"  placeholder="Enter todo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="plugins/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="plugins/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="plugins/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $( function() {
+            $( ".list-group" ).sortable({
+            connectWith: ".list-group"
+            });
+        } );
+    </script>
+</body>
+</html>
