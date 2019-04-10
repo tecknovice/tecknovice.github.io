@@ -20,7 +20,7 @@ const DB = {
     }
 }
 const DATA = DB.get()
-const app = {
+let app = {
     addTodo(e, type, input) {
         if (e.keyCode === 13 && $(input).val().trim() !== '') {
             let todo = $(input).val().trim()
