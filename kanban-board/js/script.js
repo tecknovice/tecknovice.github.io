@@ -86,7 +86,8 @@ $(function () {
             $(ui.item[0]).removeClass("dragging")
             //Remove and add
             let item = DATA[oldType].splice(oldIndex, 1)
-            DATA[newType].splice(newIndex, 0, item)
+            if (!DATA[newType]) DATA[newType] = [item]
+            else DATA[newType].splice(newIndex, 0, item)
             //Save
             DB.set(DATA)
             app.updateHeader()
