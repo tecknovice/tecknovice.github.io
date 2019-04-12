@@ -1,0 +1,39 @@
+header{
+    width: 1110px;
+    height: 46px;
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+ }
+ 
+ .brand{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 123px;
+     height: 31px;
+     font-size: 26px;
+ }
+ ul{
+     list-style-type: none;
+ }
+ li{
+     display: inline-block;
+     padding: 0 27px;
+ }
+ li:nth-child(3){
+     padding: 0 6.5px 0 27px;;
+ }
+ li:nth-child(4){
+     padding: 0 6.5px;
+ }
+ li:nth-child(5){
+     padding: 0 0 0 6.5px;
+ }
