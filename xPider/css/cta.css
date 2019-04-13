@@ -1,0 +1,73 @@
+.cta-wrapper{
+    width: 100%;
+    height: 600px;
+    background-image: url("../images/CTA.png");
+    padding-top: 175px;
+}
+.cta{
+    width: 523px;
+    height: 257px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.cta-title{
+
+}
+.cta-title > div:nth-child(1){
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.cta-title > div:nth-child(2){
+    font-size: 18px;
+    color: #D2D2D2;
+    text-align: center;
+    line-height: 34px;
+    margin-top: 14px;
+}
+.cta-input{
+    width: 100%;
+}
+.cta-input > div:nth-child(1){
+    display: flex;
+}
+.cta-input > div:nth-child(2){
+    font-size: 14px;
+    color: #D2D2D2;
+    margin-top: 14px;
+    text-align: center;
+}
+.cta-input input{
+    width: 327.5px;
+    height: 75px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #FFFFFF;
+    padding-left: 26px;
+
+    font-size: 18px;
+    color: #7E8085;
+    letter-spacing: 0;
+}
+.cta-input .vl{
+    border-left: 1px solid #E7EAEE;
+    height: 75px;
+}
+.cta-input button{
+    width: calc(100% - 328.5px);
+    height: 75px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #FFFFFF;
+
+    font-size: 16px;
+    color: #2F5BEA;
+    text-align: center;
+    text-transform: uppercase;
+}
+
