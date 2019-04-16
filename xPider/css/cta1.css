@@ -82,13 +82,11 @@
     border-left: 10px solid #2F5BEA;
 }
 .cta1-slide > div:nth-child(2) > span{
-    display: inline-block;
-    padding: 0 50px;
-    color: #7F99ED;
+    display: none;
+    color: #FFFFFF;
 }
 .cta1-slide > div:nth-child(2) > span:first-child{
-    padding-left: 0;
-    color: #FFFFFF;
+    display: inline-block;
 }
 .mobile{
     position: absolute;
