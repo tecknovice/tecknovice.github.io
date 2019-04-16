@@ -2,15 +2,18 @@ footer{
     height: 543px;
     position: relative;
 }
-.footer-logo{
-    position: absolute;
-    top: 127px;
-    left: 404px;
+.fake-links-wrapper{
+    width: 1111px;
+    margin: auto;
+    margin-top:127px;
+}
+.links-wrapper{
+    width: 971px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
 }
 .footer-links{
-    position: absolute;
-    top: 127px;
-    left: 784px;
     display: flex;
     align-items: stretch;
     justify-content: space-between;

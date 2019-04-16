@@ -13,34 +13,10 @@ button:hover, a:hover{
     cursor: pointer;
 }
 .wrapper{
-    width: 1920px;
-    position: relative;
+    max-width: 1920px;
+    min-width: 1200px;
     overflow: hidden;
 }
-.background-cover1{
-    width: 1920px;
-    height: 790px;
-    position: absolute;
-    top:0;
-    left:0; 
-    z-index: 10;
-    opacity: 0.5;
-    background-color: #151619;
-}
-.background-cover2{
-    width: 1920px;
-    height: 57px;
-    position: absolute;
-    top:790px;
-    left:0; 
-    border-radius: 50% / 100%;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    z-index: 10;
-    opacity: 0.5;
-    background-color: #151619;
-}
-
 .get-started{
     text-align: center;
     background: #2F5BEA;
