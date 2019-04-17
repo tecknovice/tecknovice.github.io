@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Helvetica;
 }
 body {
     background: rgb(204,204,204); 
@@ -10,13 +11,13 @@ body {
     background: white;
     display: block;
     margin: auto;
-    margin-top: 0.5cm;
-    margin-bottom: 0.5cm;
-    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
   }
   page[size="A4"] {  
-    width: 21cm;
-    height: 29.7cm; 
+    width: 595px;
+    height: 842px; 
   }
   header, footer{
       width: 100%;
@@ -32,9 +33,18 @@ body {
   .information{
     width: calc(100% - 197px);
     height: 100%;
+    padding: 26px 0 31px 31px;
   }
   aside{
       width: 197px;
       height: 100%;
       background: #FAFAFA;
+      padding: 26px 17px 31px 0;
   }
+.section-title{
+  font-size: 14px;
+  color: #7395FF;
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 14px;
+}
