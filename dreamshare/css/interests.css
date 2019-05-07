@@ -1,0 +1,47 @@
+.interests{
+    flex-direction: column;
+    height: 192px;
+    margin: 35px 10px 0 10px;
+}
+.interests > div:nth-child(1){
+    font-weight: 700;
+    font-size: 22px;
+    color: #444444;
+    text-align: center;
+}
+.interests > div:nth-child(2){
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 18px;
+    color: #666666;
+    letter-spacing: 0;
+    text-align: center;
+}
+.interests > div:nth-child(3) {
+    flex-direction: column;
+    height: 90px;
+}
+.interests  input[type="text"]{
+    width: 280px;
+    height: 40px;
+    border-radius: 3px;
+
+    background: #FFFFFF;
+    border: 1px solid #D4D4D4;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.07);
+
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px;
+    color: #999999;
+    text-align: left;
+}
+.interests a{
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff;
+    width: 280px;
+    height: 40px;
+    background: #FF4E50;
+    border-radius: 20px;
+}

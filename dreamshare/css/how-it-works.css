@@ -1,0 +1,69 @@
+.how-it-works{
+    margin-top: 35px;
+}
+.how-it-works > div:first-child{
+    font-weight: 700;
+    font-size: 22px;
+    color: #444444;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.how-it-works-step-cover{
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+    margin: 0 -5px 10px -5px;
+    border-radius: 4px;
+}
+.how-it-works-step-cover img{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.how-it-works-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(0,0,0,0.60) 100%);
+    border: 1px solid #979797;
+}
+.how-it-works-step{
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    flex-direction: column;
+    height: 160px;
+    margin-left: 20px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    z-index: 2;
+    right: 30px;
+}
+.how-it-works-step > div:nth-child(1){
+    font-size: 10px;
+    letter-spacing: 2px;
+    background: #FF4E50;
+    border-radius: 10px;
+    width: 70px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.how-it-works-step > div:nth-child(2){
+    font-weight: 700;
+    font-size: 24px;
+}
+.how-it-works-step > div:nth-child(3){
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px;
+    color: #E3E3E3;
+    text-align: left;
+}
