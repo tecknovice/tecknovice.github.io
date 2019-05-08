@@ -47,3 +47,26 @@ footer hr{
     color: #CCCCCC;
     letter-spacing: 1px;
 }
+@media(min-width: 768px){
+    footer{
+        margin-top: 100px;
+    }
+    .footer{
+        height: auto;
+        flex-direction: row;
+        align-items: baseline;
+    }
+    .footer > div:nth-child(2) > div, .footer > div:nth-child(3) > div{
+        text-align: left;
+    }
+    .footer ul{
+        width: auto;
+        text-align: left;
+    }
+    .footer li{
+        display: block;
+    }
+    .footer > div:nth-child(4) {
+        align-items: flex-end;
+    }
+}

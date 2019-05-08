@@ -15,3 +15,6 @@ body{
 a:hover{
     text-decoration: none;
 }
+.container{
+    max-width: 940px;
+}

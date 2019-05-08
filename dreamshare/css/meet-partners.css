@@ -37,5 +37,27 @@
     font-weight: 700;
     font-size: 14px;
     color: #FF4E50;
-    margin-top: 42px;
+}
+@media (min-width: 768px){
+    .meet-partners {
+        margin-top: 95px;
+        width: 492px;
+        height: 605px;
+    }
+    .meet-partners > div:first-child {
+        margin-bottom: 35px;
+    }
+    .meet-partners > a {
+        width: 180px;
+    }
+    .partner {
+        margin: 0 -5px 32px -5px;
+        height: 205px;
+    }
+}
+@media (min-width: 1200px){
+.meet-partners {
+    width: auto;
+    height: 361px;
+}
 }

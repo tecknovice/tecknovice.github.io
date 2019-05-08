@@ -35,6 +35,7 @@
     font-size: 14px;
     color: #999999;
     text-align: left;
+    padding-left: 15px;
 }
 .interests a{
     font-weight: 700;
@@ -44,4 +45,19 @@
     height: 40px;
     background: #FF4E50;
     border-radius: 20px;
+}
+@media (min-width: 768px){
+    .interests{
+        flex-direction: column;
+        height: 158px;
+        margin: 35px 10px 0 10px;
+    }
+    .interests > div:nth-child(3) {
+        flex-direction: row;
+        width: 482px;
+        height: auto;
+    }
+    .interests a{
+        width: 180px;
+    }
 }

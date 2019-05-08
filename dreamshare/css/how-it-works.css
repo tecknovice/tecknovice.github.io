@@ -37,11 +37,10 @@
     justify-content: space-between;
     flex-direction: column;
     height: 160px;
-    margin-left: 20px;
     color: #FFFFFF;
     position: absolute;
     top: 64px;
-    left: 0;
+    left: 20px;
     z-index: 2;
     right: 30px;
 }
@@ -66,4 +65,25 @@
     font-size: 14px;
     color: #E3E3E3;
     text-align: left;
+}
+@media (min-width: 768px){
+    .how-it-works{
+        margin-top: 95px;
+    }
+    .how-it-works-step-cover{
+        height: 400px;
+    }
+    .how-it-works-step-cover img {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .how-it-works-step {
+        height: 179px;
+        top: 205px;
+        right: 20px;
+    
 }
