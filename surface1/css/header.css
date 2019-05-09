@@ -1,0 +1,79 @@
+header{
+    height: 568px;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+}
+.header-bg{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.header{
+    position: absolute;
+    z-index: 2;
+}
+.header-logo{
+    justify-content: center;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+.header-logo > div:nth-child(1){
+    width: 8.5625rem;
+}
+.header-logo > div:nth-child(2){
+    display: none;
+}
+.header-slogan{
+    position: relative;
+    font-family: ProximaNova-Bold;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    margin-top: 8.25rem;
+}
+.header-slogan > div:nth-child(3){
+    width: 15.3rem;
+}
+.header-bar{
+    width: 13.8125rem;
+    height: .25rem;
+    background: #5D40AD;
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    z-index: -1;
+}
+.header-button{
+    margin-top: 5.125rem;
+}
+.header-button a{
+    background: #5C3CAF;
+    box-shadow: 0 16px 24px 0 rgba(10,14,52,0.50);
+    width: 8.875rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+
+    font-size: .5rem;
+    color: #FFFFFF;
+    letter-spacing: 0.4px;
+    
+}
+.header-button i{
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+.header-nav{
+    position: absolute;
+    bottom: 17px;
+    left: 2rem;
+    right: 2rem;
+    z-index: 3;
+    text-align: center;
+}
+.header-nav a{
+    font-size: 0.75rem;
+    color: #9071EA;
+    letter-spacing: 0.2px;
+}
