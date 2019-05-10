@@ -36,33 +36,14 @@ header{
 .header-slogan > div:nth-child(3){
     width: 15.3rem;
 }
+.header-buttons{
+    margin-top: 5.125rem;
+}
 .header-bar{
     width: 13.8125rem;
     height: .25rem;
     background: #5D40AD;
-    position: absolute;
-    top: 50%;
-    left: 2rem;
     z-index: -1;
-}
-.header-button{
-    margin-top: 5.125rem;
-}
-.header-button a{
-    background: #5C3CAF;
-    box-shadow: 0 16px 24px 0 rgba(10,14,52,0.50);
-    width: 8.875rem;
-    height: 2.5rem;
-    border-radius: 1.25rem;
-
-    font-size: .5rem;
-    color: #FFFFFF;
-    letter-spacing: 0.4px;
-    
-}
-.header-button i{
-    font-size: 1rem;
-    margin-right: 0.5rem;
 }
 .header-nav{
     position: absolute;

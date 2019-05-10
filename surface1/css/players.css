@@ -29,7 +29,7 @@
     width: 10.1875rem;
     z-index: -1;
     top: 69%;
-    left: 0;
+    left: 31%;
     background: #936EEA;
 }
 .players-bar-2{
@@ -37,7 +37,7 @@
     width: 7.375rem;
     z-index: -1;
     top: 26%;
-    left: 60%;
+    left: 80%;
     background: #936EEA;
 }
 .players-content > div:nth-child(1){

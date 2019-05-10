@@ -20,12 +20,10 @@
     left: 1rem;
 }
 .athletes-bar{
-    position: absolute;
     width: 16.5rem;
     z-index: -1;
-    top: 38%;
-    left: -16%;
     background: #936EEA;
+    top: 40%;
 }
 .athletes-content > div:nth-child(1){
     font-size: 3.125rem;
