@@ -1,5 +1,6 @@
 .players{
     position: relative;
+    overflow: hidden;
 }
 .players-img {
     position: absolute;
@@ -45,11 +46,15 @@
     color: #E7E7E7;
     letter-spacing: 0;
     height: 19.125rem;
+    padding: 0 0.9375rem;
 }
 .players-steps{
     background: #F5F4F9;
     height: 17.75rem;
-    padding-top: 4.5rem;
+    padding: 4.5rem 0.9375rem 0 0.9375rem;
+}
+.players-steps-desktop{
+    display: none;
 }
 .players-step{
     align-items: flex-start;
@@ -82,4 +87,43 @@
     color: #000000;
     letter-spacing: 0.74px;
     margin-top: 1.25rem;     
+}
+@media(min-width: 768px){
+    .players-steps{
+        display: none;
+    }
+    .players-content > div:nth-child(1){
+        font-size: 3.125rem;
+        color: #E7E7E7;
+        letter-spacing: 0;
+        height: auto;
+        padding: 0 36.46% 0 0.9375rem;
+    }
+    .players-steps-desktop{
+        display: block;
+        padding: 0;
+    }
+    .players-step{
+        padding: 1.25rem 36.46% 1.25rem 0.9375rem;
+    }
+    .players-step:nth-child(2){
+        background: #F5F4F9;
+    }
+    .players-step:nth-child(3){
+        background: #5E3DB3;
+    }
+    .players-img {
+        width: 28.8rem;
+        top: 0;
+        left: 49.54%;
+        transform: translateX(0);
+        right: auto;
+        z-index: 1;
+    }
+    .players-bar {
+        width: 26.5rem;
+    }
+    .players-step:nth-child(3) .players-step-number > div:nth-child(2){
+        background: #ffffff;
+    }
 }

@@ -23,7 +23,7 @@
 <body>
   <header>
     <img class="header-bg" src="images/header.jpg" alt="">
-    <div class="container header">
+    <div class="header">
       <div class="flex-box header-logo">
         <div><img src="images/surface1.png" class="img-fluid" alt=""></div>
         <div>FOR ATHLETS AND COACHES</div>
@@ -55,23 +55,23 @@
         </a>
       </div>
     </div>
-    <div class="row header-nav">
-      <div class="col-4">
-        <a href="#">FOOTBALL</a>
-      </div>
-      <div class="col-4">
-        <a href="#">BASKETBALL</a>
-      </div>
-      <div class="col-4">
-        <a href="#">BASEBALL</a>
-      </div>
-      <div class="col-6">
-        <a href="#">SOCCER</a>
-      </div>
-      <div class="col-6">
-        <a href="#">ICE HOCKEY</a>
-      </div>
-    </div>
+    <ul class="nav justify-content-center header-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">FOOTBALL</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">BASKETBALL</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">BASEBALL</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">SOCCER</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ICE HOCKEY</a>
+      </li>
+    </ul>
   </header>
   <section class="athletes">
     <div class="athletes-img">
@@ -81,8 +81,8 @@
       <div class="div-bar athletes-bar"></div>
     </div>
     <div class="athletes-content">
-      <div class="container">ATHLETES</div>
-      <div id="athletesCarousel" class="carousel slide container athletes-steps" data-ride="carousel">
+      <div class="">ATHLETES</div>
+      <div id="athletesCarousel" class="carousel slide  athletes-steps" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="h-100 athletes-step flex-box">
@@ -133,6 +133,44 @@
           <li data-target="#athletesCarousel" data-slide-to="2"></li>
         </ol>
       </div>
+      <div class="athletes-steps-desktop">
+        <div class="h-100 athletes-step flex-box">
+          <div class="flex-box">
+            <div class="flex-space-between athletes-step-number">
+              <div>01</div>
+              <div></div>
+            </div>
+            <div class="athletes-step-name">CONNECTION</div>
+          </div>
+          <div class="athletes-step-content">Connect with coaches directly, you can ping coaches to view profile.
+          </div>
+        </div>
+        <div class="h-100 athletes-step flex-box">
+          <div class="flex-box">
+            <div class="flex-space-between athletes-step-number">
+              <div>02</div>
+              <div></div>
+            </div>
+            <div class="athletes-step-name">COLLABORATION</div>
+          </div>
+          <div class="athletes-step-content">Work with other student athletes to  increase visability. When you
+            share and like other players videos it will increase your visability as a player. This is the team work
+            aspect to Surface 1.
+          </div>
+        </div>
+        <div class="h-100 athletes-step flex-box">
+          <div class="flex-box">
+            <div class="flex-space-between athletes-step-number">
+              <div>03</div>
+              <div></div>
+            </div>
+            <div class="athletes-step-name">GROWTH</div>
+          </div>
+          <div class="athletes-step-content">Resources and tools for you to get better as a student Athelte. Access
+            to training classes, tutor sessions, etc 
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section class="players">
@@ -145,8 +183,8 @@
       <div class="div-bar players-bar-2"></div>
     </div>
     <div class="players-content">
-      <div class="container">PLAYERS</div>
-      <div id="playersCarousel" class="carousel slide container players-steps" data-ride="carousel">
+      <div class="">PLAYERS</div>
+      <div id="playersCarousel" class="carousel slide  players-steps" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="h-100 players-step flex-box">
@@ -194,6 +232,42 @@
           <li data-target="#playersCarousel" data-slide-to="1"></li>
           <li data-target="#playersCarousel" data-slide-to="2"></li>
         </ol>
+      </div>
+      <div class="players-steps-desktop">
+        <div class="h-100 players-step flex-box">
+          <div class="flex-box">
+            <div class="flex-space-between players-step-number">
+              <div>01</div>
+              <div></div>
+            </div>
+            <div class="players-step-name">CONNECTION</div>
+          </div>
+          <div class="players-step-content">Connect with talented athlete directly, you can watch their skills
+            through video showreels directly from Surface 1.
+          </div>
+        </div>
+        <div class="h-100 players-step flex-box">
+          <div class="flex-box">
+            <div class="flex-space-between players-step-number">
+              <div>02</div>
+              <div></div>
+            </div>
+            <div class="players-step-name">COLLABORATION</div>
+          </div>
+          <div class="players-step-content">Work with recruiter to increase your chances of findingtalented athlete.
+          </div>
+        </div>
+        <div class="h-100 players-step flex-box">
+          <div class="flex-box">
+            <div class="flex-space-between players-step-number">
+              <div>03</div>
+              <div></div>
+            </div>
+            <div class="players-step-name">GROWTH</div>
+          </div>
+          <div class="players-step-content">Save your time, recruit proper athlets for your team.
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -251,7 +325,7 @@
 
     </div>
   </section>
-  <footer class="container flex-space-between">
+  <footer class="flex-space-between">
     <div class="flex-space-between footer-call-for-action-cover">
       <div class="footer-logo"><img src="images/logo.png" class="img-fluid"></div>
       <div class="footer-call-for-action">

@@ -12,8 +12,10 @@ header{
     z-index: 1;
 }
 .header{
+    width: 100%;
     position: absolute;
     z-index: 2;
+    padding: 0 0.9375rem;
 }
 .header-logo{
     justify-content: center;
@@ -48,8 +50,6 @@ header{
 .header-nav{
     position: absolute;
     bottom: 17px;
-    left: 2rem;
-    right: 2rem;
     z-index: 3;
     text-align: center;
 }
@@ -57,4 +57,39 @@ header{
     font-size: 0.75rem;
     color: #9071EA;
     letter-spacing: 0.2px;
+}
+@media(min-width: 768px){
+    header{
+        height: 960px;
+    }
+    .header-logo{
+        justify-content: space-between;
+    }
+    .header-logo > div:nth-child(2){
+        display: block;
+        font-size: 0.6rem;
+        color: #FFFFFF;
+        letter-spacing: 0.2px;
+    }
+    .header-slogan {
+        width: 25.5rem;
+        margin: auto;
+        margin-top: 174px;
+        font-size: 2.7rem;
+    }
+    .header-slogan > div:nth-child(3){
+        width: 21rem;
+    }
+    .header-bar {
+        width: 16.5rem;
+    }
+    .header-nav{
+        width: 100%;
+        bottom: 281px;
+        left: 0;
+        right: 0;
+    }
+    .header-buttons{
+        margin-top: 297px;
+    }
 }

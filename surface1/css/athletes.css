@@ -30,11 +30,15 @@
     color: #E7E7E7;
     letter-spacing: 0;
     height: 19.125rem;
+    padding: 0 0.9375rem;
 }
 .athletes-steps{
     background: #F5F4F9;
     height: 17.75rem;
-    padding-top: 4.5rem;
+    padding: 4.5rem 0.9375rem 0 0.9375rem;
+}
+.athletes-steps-desktop{
+    display: none;
 }
 .athletes-step{
     align-items: flex-start;
@@ -67,4 +71,43 @@
     color: #000000;
     letter-spacing: 0.74px;
     margin-top: 1.25rem;     
+}
+@media(min-width: 768px){
+    .athletes-steps{
+        display: none;
+    }
+    .athletes-content > div:nth-child(1){
+        font-size: 3.125rem;
+        color: #E7E7E7;
+        letter-spacing: 0;
+        height: auto;
+        padding: 0 0.9375rem 0 37.89%;
+    }
+    .athletes-steps-desktop{
+        display: block;
+        padding: 0;
+    }
+    .athletes-step{
+        padding: 1.25rem 0.9375rem 1.25rem 37.89%;
+    }
+    .athletes-step:nth-child(2){
+        background: #F5F4F9;
+    }
+    .athletes-step:nth-child(3){
+        background: #5E3DB3;
+    }
+    .athletes-img {
+        width: 20.75rem;
+        top: 5rem;
+        left: auto;
+        transform: translateX(0);
+        right: 62.11%;
+        z-index: 1;
+    }
+    .athletes-bar {
+        width: 26.5rem;
+    }
+    .athletes-step:nth-child(3) .athletes-step-number > div:nth-child(2){
+        background: #ffffff;
+    }
 }

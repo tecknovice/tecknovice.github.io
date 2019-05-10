@@ -10,7 +10,7 @@
     font-family: ProximaNova-Semibold;
     src: url(../fonts/ProximaNova-Semibold.otf) format("opentype");
 }
-body{
+html{
     font-family: ProximaNova-Regular, sans-serif;
     font-size: 16px;
 }
@@ -51,7 +51,7 @@ body{
 }
 .buttons{
     width: 100%;
-    /* justify-content: space-between; */
+    justify-content: space-evenly;
 }
 .buttons a{
     background: #5C3CAF;
@@ -78,4 +78,9 @@ body{
 }
 .carousel-indicators li.active{
     background: #5C3CAF;
+}
+@media(min-width:768px){
+    html{
+        font-size: 24px;
+    }
 }

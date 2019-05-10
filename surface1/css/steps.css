@@ -11,9 +11,8 @@
     width: 4.375rem;
     height: 4.375rem;
     background: #5E3DB3;
-
     position: absolute;
-    left: 1.25rem;
+    left: 0.9375rem;
     bottom: -1rem;
     z-index: 1;
 }
@@ -31,7 +30,7 @@
     background: rgba(255,255,255,0.30);
 }
 .step-text{
-    padding: 1.625rem 1.25rem 3.1875rem 1.25rem;
+    padding: 1.625rem 0.9375rem 3.1875rem 0.9375rem;
 }
 .step-text > div:nth-child(1){
     font-family: ProximaNova-Bold;
@@ -51,4 +50,23 @@
     height: 5px;
     border-radius: 2.5px;
     background: #5E3DB3;
+}
+@media(min-width: 961px){
+    .step {
+        position: relative;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .step > div{
+        width: 50%;
+    }
+    .step-text{
+        padding: 5% 1rem 0 4rem;
+    }
+    .step-number {
+        left: auto;
+        bottom: auto;
+        top: 9%;
+        right: -2.1875rem;
+    }
 }
