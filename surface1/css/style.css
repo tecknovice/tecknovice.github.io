@@ -36,6 +36,9 @@ html{
     transform: translate(-50%, -50%) rotate(-232deg);
     background: #936EEA;
 }
+a:hover{
+    text-decoration: none;
+}
 .img{
     max-width: 100%;
     max-height: 100%;
