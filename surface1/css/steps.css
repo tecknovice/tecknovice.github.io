@@ -57,16 +57,27 @@
         flex-direction: row;
         align-items: flex-start;
     }
+    .step:nth-child(2){
+        flex-direction: row-reverse;
+    }
     .step > div{
         width: 50%;
     }
     .step-text{
-        padding: 5% 1rem 0 4rem;
+        padding: 5% 10% 0 10%;
     }
     .step-number {
         left: auto;
         bottom: auto;
-        top: 9%;
+        top: 0;
+        margin-top: calc(10% - 1rem);
         right: -2.1875rem;
+    }
+    .step:nth-child(2) .step-number{
+        left: -2.1875rem;
+        bottom: auto;
+        top: 0;
+        margin-top: calc(10% - 1rem);
+        right: auto;
     }
 }

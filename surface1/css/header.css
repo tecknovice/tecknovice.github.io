@@ -93,3 +93,27 @@ header{
         margin-top: 297px;
     }
 }
+@media(min-width: 961px){
+    .header {
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        padding: 0 10%;
+    }
+    .header-slogan {
+        width: 100%;
+        margin-top: 174px;
+        font-size: 90px;
+    }
+    .header-slogan > div:nth-child(3) {
+        width: auto;
+    }
+    .header-bar {
+        left: 35%;
+    }
+    .header-nav{
+        width: auto;
+        left: auto;
+        right: 10%;
+    }
+}

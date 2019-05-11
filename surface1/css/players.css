@@ -89,13 +89,13 @@
     margin-top: 1.25rem;     
 }
 @media(min-width: 768px){
+    .players{
+        margin-top: 50px;
+    }
     .players-steps{
         display: none;
     }
     .players-content > div:nth-child(1){
-        font-size: 3.125rem;
-        color: #E7E7E7;
-        letter-spacing: 0;
         height: auto;
         padding: 0 36.46% 0 0.9375rem;
     }
@@ -125,5 +125,17 @@
     }
     .players-step:nth-child(3) .players-step-number > div:nth-child(2){
         background: #ffffff;
+    }
+}
+@media(min-width: 961px){
+    .players-content > div:nth-child(1){
+        height: auto;
+        padding: 0 50% 0 10%;
+    }
+    .players-step{
+        padding: 1.25rem 50% 1.25rem 10%;
+    }
+    .players-img {
+        left: 47%;
     }
 }

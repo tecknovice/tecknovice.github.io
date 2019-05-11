@@ -73,6 +73,9 @@
     margin-top: 1.25rem;     
 }
 @media(min-width: 768px){
+    .athletes{
+        margin-top: 50px;
+    }
     .athletes-steps{
         display: none;
     }
@@ -98,7 +101,7 @@
     }
     .athletes-img {
         width: 20.75rem;
-        top: 5rem;
+        top: 1rem;
         left: auto;
         transform: translateX(0);
         right: 62.11%;
@@ -109,5 +112,16 @@
     }
     .athletes-step:nth-child(3) .athletes-step-number > div:nth-child(2){
         background: #ffffff;
+    }
+}
+@media(min-width: 961px){
+    .athletes-content > div:nth-child(1){
+        padding: 0 10% 0 50%;
+    }
+    .athletes-step{
+        padding: 1.25rem 10% 1.25rem 50%;
+    }
+    .athletes-img {
+        right: 50%;
     }
 }

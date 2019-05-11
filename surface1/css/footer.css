@@ -4,6 +4,12 @@ footer{
     background-size: cover;
     height: 35.5rem;
     padding: 6rem 0.9375rem 1rem 0.9375rem;
+    position: relative;
+    overflow: hidden;
+}
+.footer{
+    height: 100%;
+    width: 100%;
     flex-direction: column;
 }
 .footer-logo{
@@ -13,6 +19,8 @@ footer{
     flex-direction: column;
 }
 .footer-call-for-action{
+    position: relative;
+    z-index: 1;
     margin-top: 2.875rem;
 }
 .footer-call-for-action > div:nth-child(1){
@@ -37,6 +45,39 @@ footer{
     color: #FFFFFF;
     letter-spacing: 1px;
 }
-.footer-surface1,.footer-more-info{
+.footer-links{
     display: none;
+}
+.footer-bar-1{
+    width: 8.33333333rem;
+    left: 20%;
+    z-index: -1;
+}
+.footer-bar-2{
+    width: 17.0833333rem;
+    left: 80%;
+    z-index: -1;
+}
+@media(min-width:961px){
+    .footer-call-for-action-cover{flex-direction: row;}
+    .footer-call-for-action{
+        margin-top: 0;
+    }
+    .footer-logo{
+        margin-right: 20px;
+    }
+    .footer-links{
+        display: flex;
+        width: calc(100% - 2rem);
+        position: absolute;
+        bottom: 1rem;
+    }
+    .footer-surface1{
+        width: 189px;
+    }
+    .footer-more-info{
+        font-size: 20px;
+        color: #FFFFFF;
+        letter-spacing: 1px;
+    }
 }
