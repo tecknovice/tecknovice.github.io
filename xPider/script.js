@@ -1,6 +1,7 @@
 const nextbtn = document.getElementById('next-button')
 const prevbtn = document.getElementById('prev-button')
 const slides = document.getElementById('categories').children
+const headerBars = document.getElementById('header-bars')
 
 const app = {
     getActiveItem: function () {

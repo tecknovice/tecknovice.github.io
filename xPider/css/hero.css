@@ -50,3 +50,24 @@
 .watch-video > i{
     font-size: 20px;
 }
+@media (max-width: 1110px ){
+    .hero > img{
+        width: auto;
+        max-width: none;
+        /* height: 490px; */
+        height: 847px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hero-content{
+        width: 100%;
+        max-width: 686px;
+        padding: 0 1rem;
+    }
+    .actions {
+        width: auto;
+        flex-direction: column;
+        height: 120px;
+    }
+}

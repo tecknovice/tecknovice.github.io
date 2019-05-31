@@ -16,11 +16,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 717px;
     position: relative;
 }
 .feature-title{
     width: 552px;
+    margin-bottom: 90px;
 }
 .feature-title > div:nth-child(1){
     font-size: 16px;
@@ -38,7 +38,7 @@
 .feature-cards{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
+    grid-gap: 30px;
 }
 .feature-card{
     width: 411px;
@@ -94,5 +94,27 @@
 }
 .feature-card:last-child > button{
     border-bottom: none;
+}
+@media (max-width: 1110px){
+    .feature-wrapper{
+        height: auto;
+        padding: 84px 0;
+    }
+    .feature-title{
+        width: 100%;
+        max-width: 552px;
+    }
+    .feature-cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feature-card{
+        width: calc(100% - 20px);
+        margin: auto;
+        max-width: 411px;
+    }
+    .feature-card > div:nth-child(3){
+        width: calc(100% - 20px);
+    }
 }
 

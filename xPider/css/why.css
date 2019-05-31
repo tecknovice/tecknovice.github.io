@@ -3,10 +3,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 1111px;
-    height: 477px;
+    width: 1110px;
     margin: auto;
     margin-top: 155px;
+}
+.question {
+    margin-bottom: 84px;
 }
 .question > div:first-child{
     font-size: 16px;
@@ -25,6 +27,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
+    margin-bottom: 56.5px;
 }
 .answer-title{
     font-size: 24px;
@@ -48,4 +51,13 @@
 .why hr{
     width: 100%;
     border-top: 1px solid #E7EAEE;
+}
+@media (max-width: 1110px){
+    .why{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .answers{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

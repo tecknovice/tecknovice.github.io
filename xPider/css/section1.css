@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1111px;
+    width: 1110px;
     margin: auto;
     margin-top: 111px; 
 }
@@ -43,6 +43,11 @@
 }
 .video{
     position: relative;
+    width: 541px;
+    height: 382px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 }
 .play-button{
     width: 94px;
@@ -68,3 +73,21 @@
     transform: translate(-50%,-50%);
     z-index: 11;
   }
+  @media (max-width: 1110px){
+    .section1{
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 111px; 
+    }
+    .section1-content{
+        width: 100%;
+        max-width: 541px;
+        height: auto;
+        margin-bottom: 105px;
+    }
+    .video{
+        width: 100%;
+        height: auto;
+    }
+}
