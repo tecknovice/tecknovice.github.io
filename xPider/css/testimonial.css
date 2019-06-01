@@ -81,10 +81,11 @@
     background: #D8D8D8;
     border-radius: 5.5px;
 }
-.testimonial-navbar > div:first-child{
+.testimonial-navbar > div:hover{
+    cursor: pointer;
     background: #2F5BEA;
 }
-@media (max-width: 1110px){
+@media (max-width: 1200px){
     .testimonial-wrapper{
         width: 100%;
         padding: 123px 10px 143px;

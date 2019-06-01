@@ -2,7 +2,13 @@
     position: relative;
 }
 .hero > img{
-    width: 100%;
+    width: auto;
+    max-width: none;
+    /* height: 490px; */
+    height: 847px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .hero-content{
     width: 686px;
@@ -50,24 +56,25 @@
 .watch-video > i{
     font-size: 20px;
 }
-@media (max-width: 1110px ){
-    .hero > img{
-        width: auto;
-        max-width: none;
-        /* height: 490px; */
-        height: 847px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+@media (max-width: 1200px ){
     .hero-content{
         width: 100%;
         max-width: 686px;
-        padding: 0 1rem;
+        padding: 0 10px;
+
+        top: 300px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .actions {
         width: auto;
         flex-direction: column;
         height: 120px;
+    }
+}
+@media (max-width: 767px){
+    .slogan{
+        font-size: 32px;
+        line-height: 40px;
     }
 }

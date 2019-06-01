@@ -85,17 +85,17 @@
     color: #2C2E30;
     letter-spacing: 0;
     border: none;
-    border-bottom: 3px solid #2F5BEA;
     width: 157px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: content-box;
 }
-.feature-card:last-child > button{
-    border-bottom: none;
+.feature-card > button:hover{
+    border-bottom: 3px solid #2F5BEA;
 }
-@media (max-width: 1110px){
+@media (max-width: 1200px){
     .feature-wrapper{
         height: auto;
         padding: 84px 0;

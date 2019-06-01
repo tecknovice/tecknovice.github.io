@@ -55,7 +55,7 @@
     color: #54565A;
     line-height: 28px;
 }
-@media (max-width: 1110px){
+@media (max-width: 1200px){
     .section2{
         width: 100%;
         padding: 0 10px;

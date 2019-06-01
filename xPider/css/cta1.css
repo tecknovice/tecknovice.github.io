@@ -95,7 +95,7 @@
     transform: translateX(-50%);
     z-index: 100;
 }
-@media (max-width: 1110px){
+@media (max-width: 1200px){
     .cta1-wrapper{
         height: auto;
     }
