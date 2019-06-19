@@ -13,8 +13,10 @@
     <div class='wrapper'>
         <h1>Đăng ký</h1>
         <form class='info' action='success.html' id="form-register">
-            <input type='textbox' id='name' name='name' placeholder="Họ tên" /><br />
-            <input type='date' id='birthday' name='birthday' placeholder="Ngày sinh" /><br />
+            <input type='text' id='name' name='name' placeholder="Họ tên" />
+            <div class="error"></div>
+            <input type='text' id='birthday' name='birthday' placeholder="Ngày sinh" />
+            <div class="error"></div>
             <div class='input'>
                 <div class='sex'>
                     Giới tính
@@ -30,10 +32,15 @@
                 </div>
                 <div class='clear'></div>
             </div>
-            <input type='textbox' id='address' name='address' placeholder="Địa chỉ" /><br />
-            <input type='tel' id='phone' name='phone' placeholder="Điện thoại" /><br />
-            <input type='email' id='email' name='email' placeholder="Email" /><br />
-            <input type='password' id='password' name='password' placeholder="password" /><br />
+            <div class="error"></div>
+            <input type='text' id='address' name='address' placeholder="Địa chỉ" />
+            <div class="error"></div>
+            <input type='text' id='phone' name='phone' placeholder="Điện thoại" />
+            <div class="error"></div>
+            <input type='text' id='email' name='email' placeholder="Email" />
+            <div class="error"></div>
+            <input type='password' id='password' name='password' placeholder="password" />
+            <div class="error"></div>
             <div class='button-row'>
                 <div class='button'>
                     <input type='submit' id='submit' name='submit' value="Register" />
@@ -48,8 +55,24 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script>
-        $('#form-register').on('submit',  ()=> {
-            console.log('form submit')
+        $('#form-register').on('submit', () => {
+            let isValid = true
+            if ($('#name').val().trim() === '') {
+                $('#name').next('.error').text('name is empty')
+                isValid  = false
+            }
+            else {
+                $('#name').next('.error').text('')
+            }
+            //regexlib.com
+            if ($('#email').val().match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/) === null) {
+                $('#email').next('.error').text('email is invalid')
+                isValid  = false
+            }
+            else {
+                $('#email').next('.error').text('')
+            }
+            return isValid
         })
     </script>
 </body>

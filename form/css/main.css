@@ -73,3 +73,7 @@ input[type=submit],input[type=reset]{
 .clear{
     clear: both;
 }
+.error{
+    height: 20px;
+    vertical-align: middle;
+}
