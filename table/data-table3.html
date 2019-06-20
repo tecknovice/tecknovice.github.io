@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>data table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Data table 3</h1>
+    <div style="overflow-x:auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th>profile_image</th>
+                    <th>display_name</th>
+                    <th>reputation</th>
+                    <th>website_url</th>
+                    <th>creation_date</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        //Fetch API
+        fetch('https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&site=stackoverflow')
+            .then(function (response) {
+                response.json().then(function (data) {
+                    let users = data.items
+                    render(users)
+                });
+            })
+        //ECMA Script 2015 - ES6
+        render = (users) => {
+            const tbody = document.querySelector('tbody')  // document.getElementsByTagName is OK!
+            for (let user of users) {
+                console.log(user)
+                let tr = document.createElement('tr')
+                tr.innerHTML = `
+                <td> <img src=${user.profile_image} /> </td>
+                <td> <a href=${user.link} title=${user.link}>${user.display_name}</a> </td>
+                <td> ${user.reputation} </td>
+                <td> <a href=${user.website_url} title=${user.website_url}>${user.website_url}</a> </td>
+                <td></td>
+                `
+                let creation_date = new Date(user.creation_date * 1000)
+                let date = creation_date.getDate()
+                let month = creation_date.getMonth() + 1
+                let year = creation_date.getFullYear()
+                let create_date_element = document.createTextNode(`${date}/${month}/${year}`);
+                tr.lastElementChild.appendChild(create_date_element)
+                tbody.appendChild(tr)
+            }
+
+
+        }
+    </script>
+</body>

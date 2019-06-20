@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>data table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Data table 1</h1>
+    <div style="overflow-x:auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th>profile_image</th>
+                    <th>display_name</th>
+                    <th>reputation</th>
+                    <th>website_url</th>
+                    <th>creation_date</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        //Javascript AJAX
+        let xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&site=stackoverflow', true);
+        xhttp.send()
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                let data = JSON.parse(this.responseText)
+                let users = data.items
+                render(users)
+            }
+        };
+        //Javascript DOM
+        function render(users) {
+            const tbody = document.getElementsByTagName('tbody')[0]
+            console.log(tbody)
+
+            for (let i = 0; i < users.length; i++) {
+                const user = users[i];
+                let tr = document.createElement('tr')
+                tbody.appendChild(tr)
+
+                // profile image
+                let profile_image = document.createElement('td')
+                let image = new Image()
+                image.src = user.profile_image
+                profile_image.appendChild(image)
+                tr.appendChild(profile_image)
+
+                //display name
+                let display_name = document.createElement('td')
+                let display_name_url = document.createElement('a')
+                display_name_url.innerText = user.display_name
+                display_name_url.title = user.display_name
+                display_name_url.href = user.link
+                display_name.appendChild(display_name_url)
+                tr.appendChild(display_name)
+
+                //reputation
+                let reputation = document.createElement('td')
+                reputation.innerText = user.reputation
+                tr.appendChild(reputation)
+
+                //website_url
+                let website = document.createElement('td')
+                let website_url = document.createElement('a')
+                website_url.innerText = user.website_url
+                website_url.title = user.website_url
+                website_url.href = user.website_url
+                website.appendChild(website_url)
+                tr.appendChild(website)
+
+                //creation_date
+                let creation_date = document.createElement('td')
+
+                let date = new Date(user.creation_date * 1000)
+                let day = date.getDate()
+                let month = date.getMonth() + 1
+                let year = date.getFullYear()
+
+                creation_date.innerText = day + '/' + month + '/' + year
+                tr.appendChild(creation_date)
+            }
+        }
+
+    </script>
+</body>
+
+</html>
