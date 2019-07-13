@@ -1,0 +1,42 @@
+@font-face {
+    font-family: proxima_nova_regular;
+    src: url('../fonts/proxima_nova_regular.ttf');
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: proxima_nova_regular;
+    color: #000000;
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover{
+    color: #AAA;
+    text-decoration: none;
+}
+.link{
+    color: #006DFE;
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+}
+.link i{
+    margin-left:30px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+@media (max-width: 767px){
+    /* body{
+        font-size: 12px;
+    } */
+}

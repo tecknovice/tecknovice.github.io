@@ -1,0 +1,62 @@
+header{
+    height: 962px;
+    background-image: url('../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+}
+.navbar-toggler-icon{
+    color: #FFF !important;
+}
+.hero-content{
+    margin-top: 11rem;
+}
+.hero-header{
+    font-size: 3.125rem;
+    max-width: 38rem;
+}
+.hero-support{
+    margin-top: 1.25rem;
+    max-width: 546px;
+    line-height: 1.5rem;
+}
+.hero-search{
+    display: flex;
+    margin-top: 3.6875rem;
+}
+.hero-search-text{
+    border-bottom:  2px solid #BFC0C5;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1.875rem;
+    height: 3.625rem;
+}
+.hero-circle{
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.hero-search-btn{
+    background: #1B7DFF;
+    font-size: 1.5rem;
+    width: 10.6875rem;
+    height: 3.625rem;
+    border: none;
+    color: #FFF;
+    margin-top: 1.875rem;
+}
+.hero-search input{
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    flex-grow: 1;
+    margin-left: 1.4375rem;
+}
+@media (max-width: 767px){
+    .hero-content{
+        margin-top: 2rem;
+    }
+}

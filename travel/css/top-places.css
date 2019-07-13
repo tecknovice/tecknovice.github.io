@@ -1,0 +1,59 @@
+.top-places{
+    margin-top: 139px;
+}
+.top-places-header{
+    height: 52px;
+    font-size: 2rem;
+    color: #102746;
+}
+.top-places-header:hover{
+    border-bottom: 2px solid #006DFE;
+}
+.top-places-item{
+    margin-top: 30px;
+}
+.top-places-img{
+    height: 377px;
+    overflow: hidden;
+    position: relative;
+}
+.top-places-img-text{
+    position: absolute;
+    bottom: 0;
+    background: rgba(21,24,36,0.60);
+    display: flex;
+    width: 100%;
+    height: 55px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    color: #FFF;
+}
+.top-places-body{
+    margin-top: 5rem;
+    color: #102746;
+    line-height: 1.5rem;
+}
+.top-places-btn{
+    margin-top: 2rem;
+    background: #006DFE;
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 118px;
+    height: 42px;
+}
+.top-places-interaction{
+    display: flex;
+}
+.top-places-interaction img{
+    margin-left: .5rem;
+}
+.top-places-heart, .top-places-comment{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.top-places-img >  img{
+    height: 100%;
+    width: auto;
+}

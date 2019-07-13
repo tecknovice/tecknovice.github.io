@@ -1,0 +1,22 @@
+.area{
+    margin-top:131px;
+
+}
+.area > .row > div{
+    margin-top: 30px;
+}
+.area-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    padding: 0 2rem;
+}
+.area-title{
+    font-size: 30px;
+    color: #102746;
+    line-height: 40px;
+}
+.area-detail{
+    color: #102746;
+    line-height: 24px;
+}

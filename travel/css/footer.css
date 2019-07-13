@@ -1,0 +1,21 @@
+footer{
+    background: #0E1D28;
+    color: #FFF;
+    line-height: 24px;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 0;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    width: 553px;
+}
+footer ul{
+    list-style-type: none;
+}
+.footer-list-title{
+    font-size: 18px;
+}

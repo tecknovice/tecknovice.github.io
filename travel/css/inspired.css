@@ -1,0 +1,24 @@
+.inspired-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.inspired-text{
+    height: 52px;
+    font-size: 2rem;
+    color: #102746;
+}
+.inspired-text:hover{
+    border-bottom: 2px solid #006DFE;
+}
+.inspired-item {
+    position: relative;
+    margin-top: 30px;
+}
+.inspired-name{
+    font-size: 50px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 26px;
+    left: 29px;
+}
