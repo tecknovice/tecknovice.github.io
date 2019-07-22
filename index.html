@@ -113,7 +113,7 @@
             let imageURL = event.currentTarget.children[0].getAttribute("src")
             let imageName = imageURL.match(/[\w-]+\.(png|jpg)/g)[0]
             let length = imageName.length
-            let projectName = imageName.slice(0, length - 4) + '/index.html'
+            let projectName = imageName.slice(0, length - 4).toLowerCase() + '/index.html'
             window.open(projectName, "_self")
         })
     </script>
