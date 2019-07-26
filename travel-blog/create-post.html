@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Dashboard</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="adminlte/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="adminlte/bower_components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="adminlte/bower_components/select2/dist/css/select2.min.css">
+
+    <link rel="stylesheet" href="adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="adminlte/dist/css/skins/skin-green.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/create-post.css">
+</head>
+
+<body class="hold-transition skin-green sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header" w3-include-html="components/header.html"></header>
+        <aside class="main-sidebar" w3-include-html="components/sidebar.html"></aside>
+
+
+        <div class="content-wrapper">
+            <section class="content-header">
+                <h1> Create post </h1>
+                <ol class="breadcrumb">
+                    <li> Post</li>
+                    <li class="active">Create post</li>
+                </ol>
+            </section>
+            <section class="content container-fluid" style="height: 10000px;">
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-2 col-lg-1">
+                            <button type="submit" name ="Publish" class="btn btn-primary">Publish</button>
+                        </div>
+                        <div class="col-xs-3 col-sm-2 col-lg-1">
+                            <button type="submit" name ="Draft" class="btn btn-primary">Draft</button>
+                        </div>
+                        <div class="col-xs-3 col-sm-2 col-lg-1">
+                            <button type="reset" class="btn  btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="url">URL</label>
+                        <input type="url" class="form-control" id="url" name="url" placeholder="url">
+                    </div>
+                    <div class="form-group">
+                        <label for="tags">Tags</label>
+                        <select class="form-control select2" multiple="multiple" id="tags" name="tags"
+                            data-placeholder="Select tags" style="width: 100%;">
+                            <option>Tokyo</option>
+                            <option>Osaka</option>
+                            <option>Hanoi</option>
+                            <option>Hue</option>
+                            <option>Danang</option>
+                            <option>HoiAn</option>
+                            <option>Bangkok</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Cover </label>
+                                <input type="file" name="cover" id="cover">
+                                <div class="image-wrapper" id="cover-image"> </div>
+                                <label type="button" class="btn btn-primary" for="cover">Select cover
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Thumbnail</label>
+                                <input type="file" name="thumbnail" id="thumbnail">
+                                <div class="image-wrapper" id="thumbnail-image"> </div>
+                                <label type="button" class="btn btn-primary" for="thumbnail">Select thumbnail
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="editor" name="editor" rows="10" cols="80">
+                                    This is my textarea to be replaced with CKEditor.
+                        </textarea>
+                    </div>
+                </form>
+
+
+            </section>
+        </div>
+        <footer class="main-footer" w3-include-html="components/footer.html"></footer>
+
+    </div>
+    <script src="js/boot.js"></script>
+    <script src="adminlte/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="adminlte/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="adminlte/dist/js/adminlte.min.js"></script>
+    <script src="adminlte/bower_components/ckeditor/ckeditor.js"></script>
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+            // Replace the <textarea id="editor1"> with a CKEditor
+            // instance, using default configuration.
+            CKEDITOR.replace('editor')
+            $('button[type="submit"]').click(event =>{
+                event.preventDefault()
+                console.log(event.target.innerText)
+            })
+        })
+    </script>
+</body>
+
+</html>
