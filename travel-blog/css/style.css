@@ -6,3 +6,6 @@ body{
     border: 1px solid;
     min-height: 300px;
 }
+button{
+    margin-right: 1.25rem;
+}
