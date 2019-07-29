@@ -4,6 +4,3 @@ button[type="submit"], button[type="reset"]{
 .row{
     margin-bottom: 1rem;
 }
-input[type="file"]{
-    display: none;
-}

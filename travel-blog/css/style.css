@@ -3,9 +3,13 @@ body{
 }
 .image-wrapper{
     margin: 1rem 0;
-    border: 1px solid;
+    border: 1px solid #444;
     min-height: 300px;
 }
 button{
     margin-right: 1.25rem;
+}
+
+input[type="file"]{
+    display: none;
 }
