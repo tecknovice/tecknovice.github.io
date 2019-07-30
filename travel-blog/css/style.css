@@ -1,10 +1,9 @@
 body{
     font-size: 16px;
 }
-.image-wrapper{
-    margin: 1rem 0;
-    border: 1px solid #444;
-    min-height: 300px;
+img{
+    display: block;
+    object-position: 50% 50%;
 }
 button{
     margin-right: 1.25rem;
@@ -13,3 +12,19 @@ button{
 input[type="file"]{
     display: none;
 }
+.image-wrapper {
+    height: 175px;
+    background: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.image-wrapper img.wide {
+    width: auto;
+    height: 100%;
+}
+.image-wrapper img.tall {
+    width: 100%;
+    height: auto;
+}​
