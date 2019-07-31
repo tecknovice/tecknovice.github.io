@@ -29,10 +29,6 @@
         <div class="content-wrapper">
             <section class="content-header">
                 <h1> Create post </h1>
-                <ol class="breadcrumb">
-                    <li> Post</li>
-                    <li class="active">Create post</li>
-                </ol>
             </section>
             <section class="content container-fluid">
                 <form method="POST">
@@ -67,7 +63,7 @@
                             <div class="form-group">
                                 <label>Cover </label>
                                 <input type="file" name="cover" id="cover">
-                                <div class="image-wrapper" id="cover-image"> </div>
+                                <div class="image-wrapper" id="cover-image" style="margin: 1rem 0;"> </div>
                                 <label type="button" class="btn btn-primary" for="cover">Select cover
                                 </label>
                             </div>
@@ -76,7 +72,7 @@
                             <div class="form-group">
                                 <label>Thumbnail</label>
                                 <input type="file" name="thumbnail" id="thumbnail">
-                                <div class="image-wrapper" id="thumbnail-image"> </div>
+                                <div class="image-wrapper" id="thumbnail-image" style="margin: 1rem 0;"> </div>
                                 <label type="button" class="btn btn-primary" for="thumbnail">Select thumbnail
                                 </label>
                             </div>
@@ -107,7 +103,9 @@
             $('.select2').select2()
             // Replace the <textarea id="editor1"> with a CKEditor
             // instance, using default configuration.
-            CKEDITOR.replace('editor')
+            CKEDITOR.replace('editor', {
+                height : '600'
+            })
             $('button[type="submit"]').click(event => {
                 event.preventDefault()
                 console.log(event.target.innerText)

@@ -27,10 +27,6 @@
         <div class="content-wrapper">
             <section class="content-header">
                 <h1> Setting footer </h1>
-                <ol class="breadcrumb">
-                    <li> Setting</li>
-                    <li class="active">Footer</li>
-                </ol>
             </section>
             <section class="content container-fluid">
                 <form method="POST">
@@ -59,9 +55,9 @@
     <script src="adminlte/bower_components/ckeditor/ckeditor.js"></script>
     <script>
         $(function () {
-            // Replace the <textarea id="editor1"> with a CKEditor
-            // instance, using default configuration.
-            CKEDITOR.replace('editor')
+            CKEDITOR.replace('editor', {
+                height : '600'
+            })
             $('button[type="submit"]').click(event => {
                 event.preventDefault()
                 console.log(event.target.innerText)

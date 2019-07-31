@@ -9,7 +9,7 @@ input[type="file"]{
     display: none;
 }
 .image-wrapper {
-    height: 175px;
+    height: 182px;
     background: #444;
     display: flex;
     align-items: center;
