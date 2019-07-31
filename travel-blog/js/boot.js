@@ -1,7 +1,10 @@
 function includeHTML() {
-    var z, i, elmnt, file, xhttp;
+    let z, i, elmnt, file, xhttp;
     /* Loop through a collection of all HTML elements: */
-    z = document.getElementsByTagName("*");
+    let header = document.getElementsByTagName('header')[0]
+    let aside = document.getElementsByTagName('aside')[0]
+    let footer = document.getElementsByTagName('footer')[0]
+    z = [header, aside, footer]
     for (i = 0; i < z.length; i++) {
       elmnt = z[i];
       /*search for elements with a certain atrribute:*/

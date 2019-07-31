@@ -4,3 +4,6 @@ button[type="submit"], button[type="reset"]{
 .row{
     margin-bottom: 1rem;
 }
+.image-wrapper {
+    margin: 1rem 0;
+}
