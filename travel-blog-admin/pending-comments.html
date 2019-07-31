@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Dashboard - Pending comments</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="adminlte/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="adminlte/bower_components/Ionicons/css/ionicons.min.css">
+
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="adminlte/plugins/iCheck/minimal/green.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+
+    <link rel="stylesheet" href="adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="adminlte/dist/css/skins/skin-green.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="hold-transition skin-green sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header" w3-include-html="components/header.html"></header>
+        <aside class="main-sidebar" w3-include-html="components/sidebar.html"></aside>
+
+
+        <div class="content-wrapper">
+            <section class="content-header">
+                <h1>
+                    Pending comments
+                </h1>
+            </section>
+            <section class="content container-fluid">
+                <div class="box box-solid">
+                    <div class="box-header">
+                        <button type="button" class="btn btn-primary">Approve</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </div>
+                    <div class="box-body  table-responsive">
+                        <table id="data-table" class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="checkbox-header"></th>
+                                    <th>Comment</th>
+                                    <th>Post</th>
+                                    <th>Visitor</th>
+                                    <th>Comment time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-row"></td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.
+                                    </td>
+                                    <td><a href="create-post.html">Lorem ipsum dolor sit amet</a></td>
+                                    <td> <a href="visitors-list.html">nguyen van hung</a> </td>
+                                    <td>11:50 AM Wednesday, July 31, 2019 (GMT+7)</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-row"></td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.
+                                    </td>
+                                    <td><a href="create-post.html">Lorem ipsum dolor sit amet</a></td>
+                                    <td> <a href="visitors-list.html">nguyen van hung</a> </td>
+                                    <td>11:50 AM Wednesday, July 31, 2019 (GMT+7)</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-row"></td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.
+                                    </td>
+                                    <td><a href="create-post.html">Lorem ipsum dolor sit amet</a></td>
+                                    <td> <a href="visitors-list.html">nguyen van hung</a> </td>
+                                    <td>11:50 AM Wednesday, July 31, 2019 (GMT+7)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="main-footer" w3-include-html="components/footer.html"></footer>
+
+    </div>
+    <script src="js/boot.js"></script>
+    <script src="adminlte/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="adminlte/plugins/iCheck/icheck.min.js"></script>
+    <!-- DataTables -->
+    <script src="adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+    <script src="adminlte/dist/js/adminlte.min.js"></script>
+    <script>
+        $(function () {
+            $('#checkbox-header, .checkbox-row').iCheck({
+                checkboxClass: 'icheckbox_minimal-green'
+            })
+            $('#checkbox-header').on('ifChecked', function (event) {
+                $('.checkbox-row').iCheck('check');
+            });
+            $('#checkbox-header').on('ifUnchecked', function (event) {
+                $('.checkbox-row').iCheck('uncheck');
+            });
+            $('#data-table').DataTable({
+                "columnDefs": [
+                    { "orderable": false, "targets": 0 }
+                ]
+            })
+
+            // Create an observer instance linked to the callback function
+            const observer = new MutationObserver(function (mutationsList, observer) {
+                if ($('#checkbox-header').parent().attr('aria-checked') == 'true') $('.checkbox-row').iCheck('check');
+                else $('.checkbox-row').iCheck('uncheck');
+            });
+
+            // Start observing the target node for configured mutations
+            observer.observe(document.getElementById('data-table_paginate'), {
+                childList: true
+            });
+        })
+    </script>
+</body>
+
+</html>
