@@ -1,0 +1,51 @@
+header{
+    position: relative;
+}
+.navbar{
+    position: absolute;
+    z-index: 2;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar form button{
+    position: absolute;
+    right: 0; 
+    top: 0;
+}
+.navbar-brand{
+    position: absolute;
+    top: .5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42.5px;
+    overflow: hidden;
+}
+.nav-link{
+    font-size: 1.25rem;
+}
+
+.bg-container{
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-container img{
+    width: auto;
+    height: 100%;
+}
+@media (min-width: 768px){
+    .navbar-nav{
+        width: 250px;
+    }
+    .navbar .form{
+        width: 250px;
+    }
+    .navbar-brand{
+        width: auto;
+    }
+}

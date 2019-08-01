@@ -4,28 +4,3 @@ body{
     font-size: 16px;
     color: #444;
 }
-.navbar{
-    position: relative;
-}
-.navbar-brand{
-    position: absolute;
-    top: .5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 42.5px;
-    overflow: hidden;
-}
-.nav-link{
-    font-size: 1.25rem;
-}
-@media (min-width: 768px){
-    .navbar-nav{
-        width: 250px;
-    }
-    .navbar .form{
-        width: 250px;
-    }
-    .navbar-brand{
-        width: auto;
-    }
-}
