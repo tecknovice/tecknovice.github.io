@@ -4,3 +4,36 @@ body{
     font-size: 16px;
     color: #444;
 }
+.image-container{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 252px;
+}
+.image-container img.wide {
+    width: auto;
+    height: 100%;
+}
+.image-container img.tall {
+    width: 100%;
+    height: auto;
+}​
+.image-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    opacity: 0.3;
+    z-index: 1;
+}
+a{
+    color: #444;
+}
+a:hover{
+    color: #444;
+    text-decoration: underline !important;
+}
