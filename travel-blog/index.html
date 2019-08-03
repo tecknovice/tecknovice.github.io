@@ -2,16 +2,15 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/about-me.css">
@@ -25,7 +24,8 @@
 <body>
     <header class="position-relative text-white">
         <nav class="navbar container navbar-expand-md navbar-dark">
-            <a class="navbar-brand m-0 p-0" href="index.html"><img src="images/logo.png" class="w-auto h-100" alt="logo"></a>
+            <a class="navbar-brand m-0 p-0" href="index.html"><img src="images/logo.png" class="w-auto h-100"
+                    alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,8 +60,8 @@
                     </li>
                 </ul>
                 <form class="form position-relative my-2 my-md-0">
-                    <input class="form-control bg-white rounded-pill pr-5" type="search" name="keyword" autocomplete="off" placeholder="Search"
-                        aria-label="Search">
+                    <input class="form-control bg-white rounded-pill pr-5" type="search" name="keyword"
+                        autocomplete="off" placeholder="Search" aria-label="Search">
                     <button class="btn position-absolute rounded-circle" type="submit">
                         <i class="fa fa-search text-secondary"></i>
                     </button>
@@ -79,12 +79,12 @@
     <section class="about-me container mt-5">
         <div class="row">
             <div class="col-md-4">
-                <div class="about-me-left d-flex flex-column">
-                    <div class="image-container avatar">
-                        <img src="images/avatar.jpg" class="rounded" alt="avatar">
+                <div class="d-flex flex-column">
+                    <div class="image-container rounded">
                         <div class="image-cover"></div>
+                        <img src="images/avatar.jpg" class="rounded" alt="avatar">
                     </div>
-                    <div class="about-me-social d-flex justify-content-around mt-3">
+                    <div class="d-flex justify-content-around mt-3">
                         <a href="#"><i class="fa fa-facebook-f"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -93,9 +93,10 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="about-me-right d-flex flex-column">
-                    <div class="about-me-title display-4"> <a href="#">About me</a></div>
-                    <div class="about-me-detail overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing
+                <div class="d-flex flex-column">
+                    <h1 class="text-center text-md-left"> <a href="#">About me</a></h1>
+                    <div class="text-justify overflow-hidden" style="height: 15rem;">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing
                         elit. Curabitur vel
                         ligula
                         sem. Quisque non porttitor arcu. Nulla ut tellus turpis. Nulla facilisi. Nunc malesuada, tellus
@@ -118,20 +119,20 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="stat d-flex flex-column align-items-center">
-                        <div class="stat-number">5</div>
-                        <div class="stat-title mt-3">Destinations</div>
+                        <div class="display-4">5</div>
+                        <div>destinations</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 my-3 my-md-0">
                     <div class="stat d-flex flex-column align-items-center">
-                        <div class="stat-number">150</div>
-                        <div class="stat-title mt-3">Posts</div>
+                        <div class="display-4">150</div>
+                        <div>posts</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                     <div class="stat d-flex flex-column align-items-center">
-                        <div class="stat-number">1K+</div>
-                        <div class="stat-title mt-3">Images & Videos</div>
+                        <div class="display-4">1K+</div>
+                        <div>images & videos</div>
                     </div>
                 </div>
             </div>
@@ -481,8 +482,8 @@
                 </li>
             </ul>
             <form class="form position-relative">
-                <input class="form-control bg-white rounded-pill pr-5" type="search" name="keyword" autocomplete="off" placeholder="Search"
-                    aria-label="Search">
+                <input class="form-control bg-white rounded-pill pr-5" type="search" name="keyword" autocomplete="off"
+                    placeholder="Search" aria-label="Search">
                 <button class="btn position-absolute rounded-circle" type="submit">
                     <i class="fa fa-search text-secondary"></i>
                 </button>
