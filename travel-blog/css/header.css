@@ -1,41 +1,22 @@
-header{
-    position: relative;
-    color: #fff;
-}
 header .header-text{
-    text-align: center;
     position: absolute;
-    top: 50%;
+    z-index: 2;
+    top: 65%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 4rem;
-    z-index: 2;
 }
 .navbar{
     position: absolute;
     z-index: 3;
-    top: 1rem;
     left: 50%;
     transform: translateX(-50%);
 }
-.navbar .dropdown-menu{
-    background-color: transparent;
-    border: none;
-    color: #fff;
-}
-.navbar .dropdown-menu .dropdown-item{
-    color: #fff;
-}
-.navbar .form-control{
-    background: #FFFFFF;
+.navbar form .form-control{
     opacity: 0.8;
-    border-radius: .5rem;
-    padding-right: 40px;
 }
 .navbar form button{
-    position: absolute;
-    right: 0; 
     top: 0;
+    right: 0; 
 }
 .navbar-brand{
     position: absolute;
@@ -45,18 +26,6 @@ header .header-text{
     height: 40px;
     overflow: hidden;
 }
-.navbar-brand img{
-    width: auto;
-    height: 100%;
-}
-.nav-link{
-    font-size: 1.25rem;
-}
-.navbar .dropdown-item:focus,.navbar .dropdown-item:hover, .navbar .dropdown-item.active{
-    background-color: transparent;
-    color: #444;
-}
-
 .bg-container{
     height: 400px;
     overflow: hidden;
@@ -74,28 +43,32 @@ header .header-text{
     width: 100%;
     height: 400px;
     position: absolute;    
-    background-image: linear-gradient( #000, #fff);
+    background-color: #343a40;
     opacity: 0.5;
 }
 @media (min-width: 768px){
     .navbar{
         top: 50px;
-    }
-    .navbar-nav{
-        width: 270px;
-    }
-    .navbar .form{
-        width: 270px;
-    }
+    }     
     .navbar-brand{
         top: -10px;
         height: 80px;
+    }   
+    .navbar .dropdown-menu{
+        background-color: transparent;
+        border: none;
     }
-
-    .bg-container{
-        height: 800px;
+    .navbar .dropdown-menu .dropdown-item{
+        color: #fff;
     }
-    .bg-container .bg-cover{
+    .navbar .navbar-nav, .navbar .form{
+        width: 270px;
+    }    
+    .navbar .dropdown-item:focus,.navbar .dropdown-item:hover, .navbar .dropdown-item.active{
+        background-color: transparent;
+        color: #fff;
+    }
+    .bg-container, .bg-container .bg-cover{
         height: 800px;
     }
 }

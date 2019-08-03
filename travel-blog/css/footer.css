@@ -1,39 +1,27 @@
-footer{
-}
 footer ul{
     list-style-type: none;
-    padding: 0;
 }
 .footer-brand{
-    position: absolute;
     top: 1.5rem;
     height: 40px;
     left: 50%;
     transform: translateX(-50%);
 }
-.footer-brand img{
-    width: auto;
-    height: 100%;
-}
-.footer-links form button {
-    position: absolute;
+.footer .form .btn {
     right: 0;
     top: 0;
 }
-.footer-links .form-control {
-    background: #FFFFFF;
+.footer .form .form-control {
     opacity: 0.8;
-    border-radius: .5rem;
-    padding-right: 40px;
 }
 
 @media (min-width: 768px){
-    .footer-links, .footer-links ul{
+    .footer, .footer ul{
         flex-direction: row !important;
         align-items: baseline !important;
         margin-top: 0 !important;
     }
-    .footer-links > ul,.footer-links > form {
+    .footer > ul,.footer > form {
         width: 270px;
     }
     .footer-brand{
