@@ -68,7 +68,7 @@
             Tokyo
         </div>
         <div class="bg-container">
-            <img src="images/tag-tokyo.jpg" alt="background image">
+            <img src="images/attractions-akiba.jpg" alt="background image">
             <div class="bg-cover"></div>
         </div>
     </header>
@@ -279,6 +279,11 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="js/image.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.has('keyword'))
+        $('title, .header-text').text(`Search results for "${urlParams.get('keyword')}"`)
+    </script>
 </body>
 
 </html>
