@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin Dashboard - images list</title>
+    <title>Admin Dashboard - Images select</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="adminlte/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="adminlte/bower_components/Ionicons/css/ionicons.min.css">
 
     <!-- iCheck for checkboxes and radio inputs -->
-    <link rel="stylesheet" href="adminlte/plugins/iCheck/minimal/green.css">
+    <link rel="stylesheet" href="adminlte/plugins/iCheck/flat/green.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
@@ -30,17 +30,10 @@
         <div class="content-wrapper">
             <section class="content-header">
                 <h1>
-                    Images list
+                    Images select
                 </h1>
             </section>
             <section class="content container">
-            <form method="POST" id="form">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <input type="checkbox" id="checkbox-header">
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-lg-3 col-sm-6">
                         <div class="box box-solid">
@@ -61,7 +54,7 @@
                                         <span> <strong>Dimensions</strong> </span>
                                         <span>500x500</span>
                                         <div class="box-tools pull-right">
-                                            <input type="checkbox" name="list[]" value="1" class="checkbox-row">
+                                            <input type="radio" name="image" value="" class="radiobox">
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +81,7 @@
                                         <span> <b>Dimensions</b> </span>
                                         <span>1000x400</span>
                                         <div class="box-tools pull-right">
-                                            <input type="checkbox" name="list[]" value="2" class="checkbox-row">
+                                            <input type="radio" name="image" value="" class="radiobox">
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +107,7 @@
                                         <span> <strong>Dimensions</strong> </span>
                                         <span>2000x1300</span>
                                         <div class="box-tools pull-right">
-                                            <input type="checkbox" name="list[]" value="3" class="checkbox-row">
+                                            <input type="radio" name="image" value="" class="radiobox">
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +133,7 @@
                                         <span> <strong>Dimensions</strong> </span>
                                         <span>160x160</span>
                                         <div class="box-tools pull-right">
-                                            <input type="checkbox" name="list[]" value="4" class="checkbox-row">
+                                            <input type="radio" name="image" value="" class="radiobox">
                                         </div>
                                     </div>
                                 </div>
@@ -166,7 +159,7 @@
                                         <span> <strong>Dimensions</strong> </span>
                                         <span>500x500</span>
                                         <div class="box-tools pull-right">
-                                            <input type="checkbox" name="list[]" value="5" class="checkbox-row">
+                                            <input type="radio" name="image" value="" class="radiobox">
                                         </div>
                                     </div>
                                 </div>
@@ -193,7 +186,7 @@
                                         <span> <b>Dimensions</b> </span>
                                         <span>1000x400</span>
                                         <div class="box-tools pull-right">
-                                            <input type="checkbox" name="list[]" value="6" class="checkbox-row">
+                                            <input type="radio" name="image" value="" class="radiobox">
                                         </div>
                                     </div>
                                 </div>
@@ -219,7 +212,7 @@
                                         <span> <strong>Dimensions</strong> </span>
                                         <span>2000x1300</span>
                                         <div class="box-tools pull-right">
-                                            <input type="checkbox" name="list[]" value="7" class="checkbox-row">
+                                            <input type="radio" name="image" value="" class="radiobox">
                                         </div>
                                     </div>
                                 </div>
@@ -245,7 +238,7 @@
                                         <span> <strong>Dimensions</strong> </span>
                                         <span>160x160</span>
                                         <div class="box-tools pull-right">
-                                            <input type="checkbox" name="list[]" value="8" class="checkbox-row">
+                                            <input type="radio" name="image" value="" class="radiobox">
                                         </div>
                                     </div>
                                 </div>
@@ -277,7 +270,7 @@
                           </nav>
                     </div>
                 </div>
-            </form>
+            
             </section>
         </div>
         <footer class="main-footer" w3-include-html="components/footer.html"></footer>
@@ -286,26 +279,27 @@
     <script src="js/boot.js"></script>
     <script src="adminlte/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="adminlte/dist/js/adminlte.min.js"></script>
     <!-- load image script -->
     <script src="js/image.js"></script>
     <!-- iCheck -->
     <script src="adminlte/plugins/iCheck/icheck.min.js"></script>
-
-    <script src="adminlte/dist/js/adminlte.min.js"></script>
     <script>
-        $(function () {
-            $('#checkbox-header, .checkbox-row').iCheck({
-                checkboxClass: 'icheckbox_minimal-green'
-            })
-            $('#checkbox-header').on('ifChecked', function (event) {
-                $('.checkbox-row').iCheck('check');
-            });
-            $('#checkbox-header').on('ifUnchecked', function (event) {
-                $('.checkbox-row').iCheck('uncheck');
-            });
-            $('#form').on('submit',function(event){
-                event.preventDefault()
-                console.log(event)
+        let currentPage, totalPage
+        $(function() {
+            function getImage(page = 1) {
+                $.post('/image', page, (data) => {
+                    console.log(data)
+                    currentPage = page
+                    totalPage = data.totalPage
+                    $('#data').html(tmpl('tmpl-definition', data))
+                    $('.radiobox').iCheck({
+                        radioClass: 'iradio_flat-green'
+                    })
+                })
+            }
+            $('#select-image').click(function() {
+                getImage()
             })
         })
     </script>
