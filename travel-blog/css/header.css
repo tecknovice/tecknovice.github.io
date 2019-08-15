@@ -62,7 +62,7 @@ header .header-text{
         color: #fff;
     }
     .navbar .navbar-nav, .navbar .form{
-        width: 270px;
+        width: 240px;
     }    
     .navbar .dropdown-item:focus,.navbar .dropdown-item:hover, .navbar .dropdown-item.active{
         background-color: transparent;
