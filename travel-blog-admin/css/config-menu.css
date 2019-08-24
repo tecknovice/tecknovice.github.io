@@ -1,0 +1,21 @@
+.container{
+    margin-top: 50px !important;
+}
+.list-group{
+    list-style-type: none;
+    min-height: 50px;
+}
+.list-group-item{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between ;
+}
+.ui-state-highlight{
+    height: calc(1.5rem + 20px);
+    background-color: #dadada;
+    border: none;
+}
+.dragging{
+    border: 1px solid rgba(0,0,0,.125) !important;
+    transform: rotate(3deg);
+}
