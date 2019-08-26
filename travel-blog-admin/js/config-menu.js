@@ -1,30 +1,71 @@
-const TYPE = ['TODO', 'DOING', 'DONE']
-const DB = {
+const db = {
     get: function () {
-        let data
+        let menu
         if (typeof (Storage) !== "undefined") {
-            let dataString = localStorage.getItem('DATA')
+            let dataString = localStorage.getItem('menu')
             try {
-                data = JSON.parse(dataString) || {}
+                menu = JSON.parse(dataString) || []
             } catch (error) {
-                data = {}
+                menu = []
             }
         } else {
-            alert('Sorry! No Web Storage support..')
-            data = {}
+            alert("Sorry! I'm in WC...")
+            menu = []
         }
-        return data
+        return menu
     },
-    set: function (data) {
-        localStorage.setItem('DATA', JSON.stringify(data))
+    set: function (menu) {
+        localStorage.setItem('menu', JSON.stringify(menu))
     }
 }
-const DATA = DB.get()
+const menu = db.get()
+class SubMenu{
+    title = ''
+    links = []
+    constructor(title,links){
+        this.title = title
+        this.links = links
+    }
+    insertLink(link){
+        this.links.push(link)
+    }
+    deleleLink(link){
+        
+    }
+}
+class Menu{
+    menu = []
+    constructor(menu){
+        this.menu = menu
+    }
+    readSubMenu(title) {
+        for (let index = 0; index < this.menu.length; index++) {
+            let subMenu = menu[index];
+            if (subMenu.title == title) return subMenu
+        }
+        return null
+    }
+    setSubMenu(title, links) {
+        let subMenu
+        for (let index = 0; index < this.menu.length; index++) {
+            subMenu = menu[index];
+            if (subMenu.title == title) break;
+        }
+        if (subMenu == undefined)
+        subMenu = new SubMenu(title,links)
+        if (links)
+        subMenu.links = links
+    }
+}
+
 let app = {
-    addTodo(e, type, input) {
+    
+    
+    addLink(e, type, input) {
         if (e.keyCode === 13 && $(input).val().trim() !== '') {
             let todo = $(input).val().trim()
-            if (!DATA[type]) DATA[type] = []
+            if (!this.getSubMenu(title)) this.setSubMenu(title)
+            const subMenu = this.getSubMenu(title)
             DATA[type].push(todo)
             DB.set(DATA)
             app.updateHeader()
